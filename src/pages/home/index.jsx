@@ -12,7 +12,6 @@ import {
     Input,
     Button,
     Container,
-    Term,
 } from './styled';
 
 export default function Home() {
