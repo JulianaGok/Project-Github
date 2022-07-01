@@ -48,7 +48,7 @@ export default function UserList({ props }) {
         <>
             <Header />
             <Newinput value={searchText} onChange={e => setSearchText(e.target.value)}
-                type={"text"} />
+                type={"text"} placeholder="@username" />
             <Newbutton onClick={() => getUser()}> Adicionar Novo</Newbutton>
             {
                 users.map(user =>

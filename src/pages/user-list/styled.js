@@ -52,7 +52,7 @@ export const Newbutton = styled.button`
     cursor: pointer;
     @media (max-width: 800px) {
             left: 65%;
-            width: 120px;
+            width: 150px;
     }`
 
 export const Avatar  = styled.img`
