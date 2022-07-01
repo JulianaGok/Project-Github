@@ -7,10 +7,9 @@ align-items:center;
 
 div.content-users{
     width: 80%;
-    height:200px;
-    left: 5%;
-    padding: 20px 30px;
-    margin:20px 30px;
+    height:13rem;
+    padding: 12px 30px;
+    margin:6px 20px;
     background:#ffffff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
@@ -29,9 +28,11 @@ export const Newinput = styled.input`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    @media (max-width:750px) {
-        left: 33%;
-  }`
+    @media (max-width:800px) {
+        left:40%;
+        width: 200px;
+  }
+  `
 
 export const Newbutton = styled.button`
     position: absolute;
@@ -50,8 +51,8 @@ export const Newbutton = styled.button`
     text-align: center;
     cursor: pointer;
     @media (max-width: 750px) {
-            left: 60%;
-            width: 150px;
+            left: 65%;
+            width: 120px;
     }`
 
 export const Avatar  = styled.img`
@@ -68,8 +69,8 @@ export const Arrowstyle  = styled.img`
 
 export const Name = styled.h1`
     width: 191px;
-    height: 30px;
-    left: 190px;
+    height: 20%;
+    
    
     font-family: 'Mulish';
     font-style: normal;
