@@ -1,8 +1,32 @@
 import styled from "styled-components"
 
+export const Container = styled.div`
+display: flex;
+flex:1;
+width:100vw;
+height:100vh;
+background-color:red;
+justify-content:center;
+align-items:center;
+
+div{
+    display: flex;
+    width:50%;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    height:100vh;
+}
+
+div.content-left{
+    background-color: white;
+}
+
+div.content-right{
+    background-color: black;
+}
+`
 export const Phrase = styled.h2`
-    position: absolute;
-    width: 622px;
     height: 100px;
     left: 730px;
     top: 900px;
@@ -14,23 +38,16 @@ export const Phrase = styled.h2`
     text-align: center;
     color: #ffffff;
     @media (max-width: 750px) {
-        color: #000000;
         width: 80%;
         left: 5%;
         top: 70%;
   }`
 export const Figure = styled.img`
-    position: absolute;
-    width: 860px;
-    height:100%;
-    left: 630px;
-    top: 0px;
-    background-color: #000000;
+    width: 70%;
     @media (max-width: 750px) {
     display: none;}`
 
 export const Logo = styled.img`
-    position: absolute;
     width: 400px;
     height: 130px;
     left: 40px;
@@ -40,7 +57,6 @@ export const Logo = styled.img`
 }
 `
 export const Title = styled.h1`
-position: absolute;
     width: 172px;
     height: 30px;
     left: 95px;
@@ -56,7 +72,6 @@ position: absolute;
   }`
 
 export const Text = styled.h2`
-position: absolute;
     width: 400px;
     height: 20px;
     left: 97px;
@@ -71,8 +86,7 @@ position: absolute;
         left: 17%;
   }`
 export const Input = styled.input`
-box-sizing: border-box;
-    position: absolute;
+    box-sizing: border-box;
     width: 420px;
     height: 58px;
     left: 97px;
@@ -91,7 +105,6 @@ box-sizing: border-box;
   }
 `
 export const Button = styled.button`
-    position: absolute;
     width: 420px;
     height: 56px;
     left: 97px;
