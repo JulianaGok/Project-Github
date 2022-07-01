@@ -12,6 +12,7 @@ import {
     Input,
     Button,
     Container,
+    Term,
 } from './styled';
 
 export default function Home() {
@@ -32,7 +33,6 @@ export default function Home() {
                     >Cadastrar</Link>
                 </Button>
             </div>
-
             <div className='content-right'>
                 <Figure src={men} alt="men" />
                 <Phrase>Gerencie e adicione tags ao seus repositórios favoritos.</Phrase>

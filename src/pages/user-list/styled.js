@@ -1,20 +1,22 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-position: relative;
-width: 80%;
-height:200px;
-left: 5%;
-top: 20px;
-padding: 30px 40px;
-margin:30px 40px;
-background:#ffffff;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-border-radius: 8px;
-`
+display: flex;
+justify-content:center;
+align-items:center;
+
+div.content-users{
+    width: 80%;
+    height:200px;
+    left: 5%;
+    padding: 20px 30px;
+    margin:20px 30px;
+    background:#ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}`
 
 export const Newinput = styled.input`
-    box-sizing: border-box;
     position: absolute;
     width: 265px;
     height: 60px;
@@ -59,12 +61,10 @@ export const Avatar  = styled.img`
     border-radius:50%;
 }`
 
-export const Arrow  = styled.img`
-  &.arrow  {
-    width:100px;
-    height:100px;
-    border-radius:50%;
-}`
+export const Arrowstyle  = styled.img`
+    width:1rem;
+    height: 6rem;
+    `
 
 export const Name = styled.h1`
     width: 191px;
@@ -82,10 +82,6 @@ export const Name = styled.h1`
     }`
 
 export const Namelogin = styled.h2`
-    width: 191px;
-    height: 30px;
-    left: 190px;
-   
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
@@ -98,7 +94,6 @@ export const Namelogin = styled.h2`
 
 
 export const At = styled.h2`
-position: absolute; 
     width: 124px;
     left: 190px;
     font-family: 'Mulish';
@@ -112,7 +107,6 @@ position: absolute;
     }`
 
 export const Local = styled.h2`
-position: absolute;
     width: 94px;
     left: 225px;
     font-family: 'Mulish';
@@ -123,7 +117,6 @@ position: absolute;
     color:var(--grey);
 `
 export const Public = styled.h2`
-position: absolute;
     width: 94px;
     left: 225px;
     font-family: 'Mulish';

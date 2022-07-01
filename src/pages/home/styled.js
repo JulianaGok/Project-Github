@@ -1,96 +1,84 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-display: flex;
-flex:1;
-width:100vw;
-height:100vh;
-background-color:red;
-justify-content:center;
-align-items:center;
+    display: flex;
+    flex:1;
+    width:100vw;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
 
 div{
     display: flex;
     width:50%;
-    justify-content:center;
-    align-items:center;
     flex-direction:column;
     height:100vh;
+    @media (max-width: 800px) {
+        width:100%;
+    }
 }
 
 div.content-left{
-    background-color: white;
+    background-color:var(--white); 
+    padding-left:10%;
+    justify-content:center;
 }
 
 div.content-right{
-    background-color: black;
-}
-`
+    background-color:var(--black);
+    justify-content:center;
+    align-items:center;
+    @media (max-width: 800px) {
+    display: none;}
+}`
+
 export const Phrase = styled.h2`
-    height: 100px;
-    left: 730px;
-    top: 900px;
+    display: flex;
+    width:80%;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400px;
     font-size: 40px;
     line-height: 55px;
     text-align: center;
-    color: #ffffff;
-    @media (max-width: 750px) {
-        width: 80%;
-        left: 5%;
-        top: 70%;
+    color: var(--white);
+    @media (max-width: 800px) {
+        color:var(--black);
   }`
+
 export const Figure = styled.img`
-    width: 70%;
-    @media (max-width: 750px) {
+    width: 80%;
+    @media (max-width: 800px) {
     display: none;}`
 
 export const Logo = styled.img`
-    width: 400px;
-    height: 130px;
-    left: 40px;
-    top: 20%;
-    @media (max-width: 650px) {
+    width: 20rem;
+    height: 20%;
+    @media (max-width: 800px) {
         width: 70%;
 }
 `
 export const Title = styled.h1`
-    width: 172px;
     height: 30px;
-    left: 95px;
     font-style: normal;
     font-family:'Mulish';
     font-weight: 700;
     font-size: 24px;
     line-height: 10px;
-    top:352px;
-    color:  #000000;
-    @media (max-width: 650px) {
-        left: 17%;
-  }`
+    color:  #000000;`
 
 export const Text = styled.h2`
-    width: 400px;
-    height: 20px;
-    left: 97px;
-    top: 390px;
+    height: 40px;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #7E7E7E;
-    @media (max-width: 650px) {
-        left: 17%;
-  }`
+    color: #7E7E7E;`
+
 export const Input = styled.input`
-    box-sizing: border-box;
     width: 420px;
-    height: 58px;
-    left: 97px;
-    top: 434px;
+    height: 3.4rem;
     padding: 14px 30px;
     border: 1px solid #E5E5E5;
     border-radius: 4px;
@@ -100,23 +88,14 @@ export const Input = styled.input`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    @media (max-width: 650px) {
-        left: 13%;
-  }
 `
 export const Button = styled.button`
-    width: 420px;
-    height: 56px;
-    left: 97px;
-    top: 532px;
+    width: 26rem;
+    margin-top:2rem;
     border-radius: 100px;
-    background:  #000000;
+    background:var(--black);
 
     font-family: 'Mulish';
     font-weight: 400;
     font-size: 20px;
-    line-height: 50px;
-    text-decoration: none;
-    @media (max-width: 650px) {
-        left: 13%;
-  }`
+    line-height: 50px;`

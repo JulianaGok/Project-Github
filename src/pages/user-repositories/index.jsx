@@ -35,11 +35,7 @@ export default function UseRepositories({ props }) {
         Api.getReposByUsername(query.get("text")).then(res =>
             setRepositories(res.data));
 
-    }, [query.get("text")]);
-
-    const getRepositories = () => {
-        Api.getReposByUsername(repositories).then(res => setRepositories([...users, res.data]));
-    }
+    });
 
     return (
         <>
@@ -55,7 +51,6 @@ export default function UseRepositories({ props }) {
                             <Numbwatchers>{repo.watchers_count}</Numbwatchers>
                             <Numbstargazers>{repo.stargazers_count}</Numbstargazers>
                             <Updated>{repo.updated_at}</Updated>
-
                         </Container>
                     </>
                 )

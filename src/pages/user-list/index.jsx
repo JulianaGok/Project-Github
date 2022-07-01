@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Api from "../../services/api";
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/header';
+import Arrow from '../../../src/assets/arrow.svg';
 
 import {
     Container,
@@ -12,7 +13,7 @@ import {
     Local,
     Public,
     Avatar,
-    Arrow,
+    Arrowstyle,
     Newinput,
     Newbutton,
 } from './styled';
@@ -51,25 +52,22 @@ export default function UserList({ props }) {
                 users.map(user =>
                     <>
                         <Container>
-                            <Avatar className="avatar"
-                                src={user.avatar_url}
-                                alt="avatar">
-                            </Avatar>
+                            <div className='content-users'>
+                                <Avatar className="avatar"
+                                    src={user.avatar_url}
+                                    alt="avatar">
+                                </Avatar>
 
-                            <Arrow className="arrow"
-                                src={'arrow.svg'}
-                                alt="arrow" >
-                            </Arrow>
-
-                            <Name type="button">
-                                <Link to={`/user-repositories?text=${user.login}`}
-                                >{user.name}</Link>
-                            </Name>
-
-                            <Namelogin>{user.login}</Namelogin>
-                            <At>{user.company}</At>
-                            <Local>{user.location}</Local>
-                            <Public>{user.public_repos}</Public>
+                                <Arrowstyle src={Arrow} alt="arrow" />
+                                <Name type="button">
+                                    <Link to={`/user-repositories?text=${user.login}`}
+                                    >{user.name}</Link>
+                                </Name>
+                                <Namelogin>{user.login}</Namelogin>
+                                <At>{user.company}</At>
+                                <Local>{user.location}</Local>
+                                <Public>{user.public_repos}</Public>
+                            </div>
                         </Container>
                     </>
                 )
