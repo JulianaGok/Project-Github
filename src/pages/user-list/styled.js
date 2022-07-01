@@ -50,7 +50,7 @@ export const Newbutton = styled.button`
     line-height: 50px;
     text-align: center;
     cursor: pointer;
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
             left: 65%;
             width: 120px;
     }`
@@ -71,14 +71,13 @@ export const Name = styled.h1`
     width: 191px;
     height: 20%;
     
-   
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 27px;
     color: var(--black);
-    @media (max-width: 650px) {
+    @media (max-width: 800px) {
             left: 28%;
     }`
 
@@ -89,7 +88,7 @@ export const Namelogin = styled.h2`
     font-size: 24px;
     line-height: 27px;
     color: var(--black);
-    @media (max-width: 650px) {
+    @media (max-width: 800px) {
             left: 28%;
     }`
 
@@ -103,7 +102,7 @@ export const At = styled.h2`
     font-size: 16px;
     line-height: 20px;
     color: var(--black);
-    @media (max-width: 650px) {
+    @media (max-width: 800px) {
             left: 28%;
     }`
 
