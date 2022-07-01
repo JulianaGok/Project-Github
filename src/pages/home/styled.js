@@ -14,14 +14,17 @@ div{
     flex-direction:column;
     height:100vh;
     @media (max-width: 800px) {
-        width:100%;
+        width:100vw;
     }
 }
 
 div.content-left{
     background-color:var(--white); 
-    padding-left:10%;
+    padding-left:15%;
     justify-content:center;
+    @media (max-width: 800px) {
+        padding-left:none;
+    }
 }
 
 div.content-right{
@@ -55,7 +58,7 @@ export const Logo = styled.img`
     width: 20rem;
     height: 20%;
     @media (max-width: 800px) {
-        width: 70%;
+        width: 80%;
 }
 `
 export const Title = styled.h1`
@@ -77,8 +80,8 @@ export const Text = styled.h2`
     color: #7E7E7E;`
 
 export const Input = styled.input`
-    width: 420px;
-    height: 3.4rem;
+    width: 26rem;
+    height:4rem;
     padding: 14px 30px;
     border: 1px solid #E5E5E5;
     border-radius: 4px;

@@ -29,7 +29,7 @@ export const Newinput = styled.input`
     font-weight: 400;
     font-size: 16px;
     @media (max-width:800px) {
-        left:40%;
+        left:34%;
         width: 200px;
   }
   `
@@ -51,7 +51,7 @@ export const Newbutton = styled.button`
     text-align: center;
     cursor: pointer;
     @media (max-width: 800px) {
-            left: 65%;
+            left: 55%;
             width: 150px;
     }`
 
