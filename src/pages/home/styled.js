@@ -14,7 +14,7 @@ div{
     flex-direction:column;
     height:100vh;
     @media (max-width: 800px) {
-        width:100vw;
+    width:120vw;
     }
 }
 
@@ -23,7 +23,7 @@ div.content-left{
     padding-left:15%;
     justify-content:center;
     @media (max-width: 800px) {
-        padding-left:none;
+        padding-left:9%;
     }
 }
 
@@ -91,6 +91,9 @@ export const Input = styled.input`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    @media (max-width: 800px) {
+        width: 20rem;
+} 
 `
 export const Button = styled.button`
     width: 26rem;
@@ -101,4 +104,7 @@ export const Button = styled.button`
     font-family: 'Mulish';
     font-weight: 400;
     font-size: 20px;
-    line-height: 50px;`
+    line-height: 50px;
+    @media (max-width: 800px) {
+        width: 20rem;
+} `
