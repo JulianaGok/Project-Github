@@ -5,7 +5,7 @@ position: relative;
 width: 70%;
 height:200px;
 left: 25rem;
-top: 120px;
+top: 7rem;
 padding: 30px 40px;
 margin:20px 30px;
 background:#ffffff;
@@ -15,14 +15,12 @@ border-radius: 8px;
   top: 55rem;
   left: 2rem; 
   width: 80%;
-
-  }` 
+}` 
 
 export const Name = styled.h1`
 width: 213px;
 height: 46px;
 left: 478px;
-top: 200px;
 
 font-family: 'Mulish';
 font-style: normal;
@@ -104,13 +102,23 @@ width: 324px;
 height: 361px;
 left: 58px;
 top: 112px;
-
 background: #FFFFFF;
 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 border-radius: 8px;
 @media (max-width: 800px) {
   left: 10rem; 
   }`     
+
+export const Following = styled.h3`
+`   
+export const NameUser = styled.h1`
+` 
+export const Namelogin = styled.h2`
+` 
+export const Followers = styled.h3`
+` 
+export const Starred = styled.h3`
+`
 
 
 export const Avatar = styled.img`

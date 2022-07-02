@@ -13,7 +13,12 @@ import {
     Updated,
 
     ContainerUser,
+    NameUser,
     Avatar,
+    Namelogin,
+    Followers,
+    Following,
+    Starred,
 
     ContainerAbout,
     ContainerEmphasis,
@@ -64,11 +69,11 @@ export default function UseRepositories({ props }) {
                                 src={user.avatar_url}
                                 alt="avatar"
                             ></Avatar>
-                            <Name>{user.name}</Name>
-                            {user.login}
-                            <p>Seguidores: {user.followers}</p>
-                            <p>Seguindo: {user.following}</p>
-                            <p>Favoritos: {user.starred}</p>
+                            <NameUser>{user.name}</NameUser>
+                            <Namelogin>{user.login}</Namelogin>
+                            <Followers><p>Seguidores: {user.followers}</p></Followers>
+                            <Following><p>Seguindo: {user.following}</p></Following>
+                            <Starred><p>Favoritos: {user.starred}</p></Starred>
                         </ContainerUser>
 
                         <ContainerAbout>
