@@ -54,22 +54,21 @@ export default function UserList({ props }) {
                 users.map(user =>
                     <>
                         <Container>
-                            <div className='content-users'>
-                                <Avatar className="avatar"
-                                    src={user.avatar_url}
-                                    alt="avatar">
-                                </Avatar>
+                            <Avatar className="avatar"
+                                src={user.avatar_url}
+                                alt="avatar">
+                            </Avatar>
 
-                                <Arrowstyle src={Arrow} alt="arrow" />
-                                <Name type="button">
-                                    <Link to={`/user-repositories?text=${user.login}`}
-                                    >{user.name}</Link>
-                                </Name>
-                                <Namelogin>{user.login}</Namelogin>
-                                <At>{user.company}</At>
-                                <Local>{user.location}</Local>
-                                <Public>{user.public_repos}</Public>
-                            </div>
+                            <Arrowstyle src={Arrow} alt="arrow" />
+                            <Name type="button">
+                                <Link to={`/user-repositories?text=${user.login}`}
+                                >{user.name}</Link>
+                            </Name>
+                            <Namelogin>{user.login}</Namelogin>
+                            <At>{user.company}</At>
+                            <Local>{user.location}</Local>
+                            <Public>{user.public_repos}</Public>
+
                         </Container>
                     </>
                 )
