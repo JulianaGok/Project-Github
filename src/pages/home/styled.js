@@ -23,7 +23,7 @@ div.content-left{
     padding-left:15%;
     justify-content:center;
     @media (max-width: 800px) {
-        padding-left:9%;
+        padding-left:5%;
     }
 }
 
