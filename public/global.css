@@ -19,22 +19,12 @@ html {
         font-size: 87.5%;
 } }
 
-input, button {
-    outline: none;
-    
-}
-
 body {
     background:var(--white-200);
     
 }
 
-button {
-    cursor: pointer;
-}
-
 a {
     text-decoration: none;
-    color:#ffffff;
 }
 

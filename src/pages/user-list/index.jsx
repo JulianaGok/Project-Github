@@ -59,12 +59,21 @@ export default function UserList({ props }) {
                                 alt="avatar">
                             </Avatar>
 
+
+                            <div className="name-login">
+                                <Name type="button">
+                                    <Link to={`/user-repositories?text=${user.login}`}
+                                    >{user.name}</Link>
+                                </Name>
+                                <br></br>
+                                <Namelogin>{user.login}</Namelogin>
+
+                            </div>
+
                             <Arrowstyle src={Arrow} alt="arrow" />
-                            <Name type="button">
-                                <Link to={`/user-repositories?text=${user.login}`}
-                                >{user.name}</Link>
-                            </Name>
-                            <Namelogin>{user.login}</Namelogin>
+
+
+
                             <At>{user.company}</At>
                             <Local>{user.location}</Local>
                             <Public>{user.public_repos}</Public>

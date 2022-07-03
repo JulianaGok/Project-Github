@@ -1,17 +1,43 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-position: relative;
-width: 80%;
-height:200px;
-left: 10%;
-top: 20px;
-padding: 30px 30px;
-margin:9px 9px;
-background:var(--white);
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-border-radius: 8px;
+    display: flex;
+    width:90vw;
+    height:16vh;
+    padding: 30px 40px;
+    margin:30px 60px;
+    background:var(--white);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+
+div.name-login{
+    flex-direction:column;
+    padding: 10px 20px;
+    height:10vh;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--black);
+    cursor: pointer;
+    @media (max-width: 800px) {
+        padding-left:5%;
+    }
+}
 `
+
+export const Avatar  = styled.img`
+  &.avatar  {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}`
+
+export const Arrowstyle  = styled.img`
+    width:4rem;
+    height: 2rem;
+    `
 
 export const Newinput = styled.input`
     box-sizing: border-box;
@@ -54,18 +80,6 @@ export const Newbutton = styled.button`
             font-size: 16px;
     }`
 
-export const Avatar  = styled.img`
-  &.avatar  {
-    width:100px;
-    height:100px;
-    border-radius:50%;
-}`
-
-export const Arrowstyle  = styled.img`
-    width:1rem;
-    height: 6rem;
-    `
-
 export const Name = styled.h1`
     width: 191px;
     height: 1px;
@@ -77,10 +91,11 @@ export const Name = styled.h1`
     font-size: 24px;
     line-height: 27px;
     color: var(--black);
-    cursor: pointer;`
+    cursor: pointer;
+    `
 
 export const Namelogin = styled.h2`
-    width: 191px;
+    /* width: 191px;
     height: 30px;
     left: 190px;
    
@@ -89,7 +104,8 @@ export const Namelogin = styled.h2`
     font-weight: 700;
     font-size: 24px;
     line-height: 27px;
-    color: var(--black);`
+    color: var(--black); */
+    `
 
 
 export const At = styled.h2`
