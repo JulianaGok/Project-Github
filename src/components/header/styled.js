@@ -5,7 +5,7 @@ export const Container = styled.header`
     display: flex; 
     padding: 3rem 0;
     @media (max-width: 800px) {
-        padding: 2.5rem 0;
+        padding: 3rem 0;
     }
 `
 export const Logo = styled.img`
@@ -17,5 +17,5 @@ export const Logo = styled.img`
     @media (max-width: 800px) {
         left:10px;
         width: 90px;
-        height: 50px;
+        height: 65px;
     }` 

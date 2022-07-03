@@ -4,6 +4,10 @@ import Api from "../../services/api";
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/header';
 import Arrow from '../../../src/assets/arrow.svg';
+import Iconjob from '../../../src/assets/iconjob.svg';
+import Iconlocal from '../../../src/assets/iconlocal.svg';
+import Star from '../../../src/assets/star.svg';
+import Trash from '../../../src/assets/trash.svg';
 
 import {
     Container,
@@ -16,6 +20,10 @@ import {
     Arrowstyle,
     Newinput,
     Newbutton,
+    Jobstyle,
+    Localtyle,
+    Starstyle,
+    Trashstyle,
 } from './styled';
 
 function useQuery() {
@@ -59,7 +67,6 @@ export default function UserList({ props }) {
                                 alt="avatar">
                             </Avatar>
 
-
                             <div className="name-login">
                                 <Name type="button">
                                     <Link to={`/user-repositories?text=${user.login}`}
@@ -68,16 +75,17 @@ export default function UserList({ props }) {
                                 <br></br>
                                 <Namelogin>{user.login}</Namelogin>
 
+                                <div className="info">
+                                    <Jobstyle src={Iconjob} alt="iconejob" />
+                                    <At>{user.company}</At>
+                                    <Localtyle src={Iconlocal} alt="iconlocal" />
+                                    <Local>{user.location}</Local>
+                                    <Starstyle src={Star} alt="star" />
+                                    <Public>{user.public_repos}</Public>
+                                </div>
                             </div>
-
                             <Arrowstyle src={Arrow} alt="arrow" />
-
-
-
-                            <At>{user.company}</At>
-                            <Local>{user.location}</Local>
-                            <Public>{user.public_repos}</Public>
-
+                            <Trashstyle src={Trash} alt="trash" />
                         </Container>
                     </>
                 )

@@ -105,6 +105,9 @@ export const Button = styled.button`
     font-weight: 400;
     font-size: 20px;
     line-height: 50px;
+    a {
+        color:var(--white);
+    }
     @media (max-width: 800px) {
         width: 20rem;
 } `
