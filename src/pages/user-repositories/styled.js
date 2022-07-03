@@ -1,27 +1,83 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-position: relative;
-width: 70%;
+display:flex;
+flex-direction: column;
+/* width: 70%;
 height:200px;
 left: 25rem;
 top: 7rem;
 padding: 30px 40px;
-margin:20px 30px;
-background:#ffffff;
+margin:20px 30px; */
+/* background:#ffffff;
 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-border-radius: 8px; 
+border-radius: 8px;  */
 @media (max-width: 800px) {
   top: 55rem;
   left: 2rem; 
   width: 80%;
+} 
+
+div.repo-info {
+width: 65%;
+left: 50rem;
+padding: 30px 40px;
+margin:20px 30px;
+background:#ffffff;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+border-radius: 8px; }
+
+div.user-info {
+  width: 30%;
+left: 25rem;
+padding: 30px 40px;
+margin:20px 30px;
+background: #FFFFFF;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+border-radius: 8px;
+@media (max-width: 800px) {
+  left: 10rem; 
+  }
+   }
+
+div.user-bio {
+width: 324px;
+height: 298px;
+left: 58px;
+top: 481px;
+background: #FFFFFF;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+border-radius: 8px;   
+@media (max-width: 800px) {
+  left: 10rem; 
+  }
+   }
+
+div.important {
+
+width: 324px;
+height: 125px;
+left: 58px;
+top: 787px;
+background: #FFFFFF;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+border-radius: 8px;
+@media (max-width: 800px) {
+  left: 10rem; 
+}}
+
+` 
+export const Avatar = styled.img`
+  &.avatar  {
+    width:100px;
+    height:100px;
+    border-radius:50%;
 }` 
 
 export const Name = styled.h1`
 width: 213px;
 height: 46px;
 left: 478px;
-
 font-family: 'Mulish';
 font-style: normal;
 font-weight: 700;
@@ -34,7 +90,6 @@ width: 484px;
 height: 20px;
 left: 478px;
 top: 220px;
-
 font-family: 'Mulish';
 font-style: normal;
 font-weight: 400;
@@ -47,7 +102,6 @@ width: 72px;
 height: 15px;
 left: 498px;
 top: 100px;
-
 font-family: 'Mulish';
 font-style: normal;
 font-weight: 400;
@@ -60,7 +114,6 @@ width: 8px;
 height: 15px;
 left: 801px;
 top: 309px;
-
 font-family: 'Mulish';
 font-style: normal;
 font-weight: 400;
@@ -73,13 +126,11 @@ width: 8px;
 height: 15px;
 left: 765px;
 top: 497px;
-
 font-family: 'Mulish';
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 15px;
-
 color: #7E7E7E;
 `
 export const Updated = styled.text`
@@ -92,66 +143,14 @@ font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 15px;
-
 color: #7E7E7E;
 `
+export const ContainerUser = styled.div``     
+export const Following = styled.h3``   
+export const NameUser = styled.h1`` 
+export const Namelogin = styled.h2`` 
+export const Followers = styled.h3`` 
+export const Starred = styled.h3``   
+export const ContainerAbout = styled.div``  
 
-export const ContainerUser = styled.div`
-position: absolute;
-width: 324px;
-height: 361px;
-left: 58px;
-top: 112px;
-background: #FFFFFF;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-border-radius: 8px;
-@media (max-width: 800px) {
-  left: 10rem; 
-  }`     
-
-export const Following = styled.h3`
-`   
-export const NameUser = styled.h1`
-` 
-export const Namelogin = styled.h2`
-` 
-export const Followers = styled.h3`
-` 
-export const Starred = styled.h3`
-`
-
-
-export const Avatar = styled.img`
-  &.avatar  {
-    width:100px;
-    height:100px;
-    border-radius:50%;
-}`    
-
-export const ContainerAbout = styled.div`
-position: absolute;
-width: 324px;
-height: 298px;
-left: 58px;
-top: 481px;
-
-background: #FFFFFF;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-border-radius: 8px;   
-@media (max-width: 800px) {
-  left: 10rem; 
-  }`  
-
-export const ContainerEmphasis = styled.div`
-position: absolute;
-width: 324px;
-height: 125px;
-left: 58px;
-top: 787px;
-
-background: #FFFFFF;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-border-radius: 8px;
-@media (max-width: 800px) {
-  left: 10rem; 
-  }`    
+   

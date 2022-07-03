@@ -79,9 +79,9 @@ export const Newinput = styled.input`
     position: absolute;
     width: 265px;
     height: 60px;
-    left: 75%;
+    left: 70%;
     top: 15px;
-    padding: 14px 30px;
+    padding: 10px 20px;
     border: 1px solid #E5E5E5;
     border-radius: 50px;
     background-color: var(--white);
@@ -89,7 +89,7 @@ export const Newinput = styled.input`
     font-weight: 400;
     font-size: 16px;
     @media (max-width:750px) {
-        left: 28%;
+        left: 26%;
         padding: 9px 10px;
   }`
 
@@ -119,7 +119,6 @@ export const Name = styled.h1`
     width: 191px;
     height: 1px;
     left: 190px;
-   
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;

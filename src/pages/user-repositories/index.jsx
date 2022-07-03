@@ -45,50 +45,52 @@ export default function UseRepositories({ props }) {
     return (
         <>
             <Header />
+            <Container>
 
-            {
-                repositories.map(repo =>
-                    <>
-                        <Container>
-                            <Name>{repo.name}</Name>
-                            <Namedescription>{repo.description}</Namedescription>
-                            <Namelanguage>{repo.language}</Namelanguage>
-                            <Numbwatchers>{repo.watchers_count}</Numbwatchers>
-                            <Numbstargazers>{repo.stargazers_count}</Numbstargazers>
-                            <Updated>{repo.updated_at}</Updated>
-                        </Container>
-                    </>
-                )
-            }
+                {
+                    repositories.map(repo =>
+                        <>
+                            <div className="repo-info">
+                                <Name>{repo.name}</Name>
+                                <Namedescription>{repo.description}</Namedescription>
+                                <Namelanguage>{repo.language}</Namelanguage>
+                                <Numbwatchers>{repo.watchers_count}</Numbwatchers>
+                                <Numbstargazers>{repo.stargazers_count}</Numbstargazers>
+                                <Updated>{repo.updated_at}</Updated>
+                            </div>
+                        </>
+                    )
+                }
 
-            {
-                users.map(user =>
-                    <>
-                        <ContainerUser>
-                            <Avatar className="avatar"
-                                src={user.avatar_url}
-                                alt="avatar"
-                            ></Avatar>
-                            <NameUser>{user.name}</NameUser>
-                            <Namelogin>{user.login}</Namelogin>
-                            <Followers><p>Seguidores: {user.followers}</p></Followers>
-                            <Following><p>Seguindo: {user.following}</p></Following>
-                            <Starred><p>Favoritos: {user.starred}</p></Starred>
-                        </ContainerUser>
+                {
+                    users.map(user =>
+                        <>
+                            <div className="user-info">
+                                <Avatar className="avatar"
+                                    src={user.avatar_url}
+                                    alt="avatar"
+                                ></Avatar>
+                                <NameUser className="username">{user.name}</NameUser>
+                                <Namelogin>{user.login}</Namelogin>
+                                <Followers>Seguidores: {user.followers}</Followers>
+                                <Following>Seguindo: {user.following}</Following>
+                                <Starred>Favoritos: {user.starred}</Starred>
+                            </div>
 
-                        <ContainerAbout>
-                            <h1>Sobre</h1>
-                            <p>{user.bio}</p>
-                            <p>{user.company}</p>
-                            <p>{user.location}</p>
-                        </ContainerAbout>
+                            <div className="user-bio">
+                                <h1>Sobre</h1>
+                                <p>{user.bio}</p>
+                                <p>{user.company}</p>
+                                <p>{user.location}</p>
+                            </div>
 
-                        <ContainerEmphasis>
-                            <h1>Destaques</h1>
-                        </ContainerEmphasis>
-                    </>
-                )
-            }
+                            <div className="important">
+                                <h1>Destaques</h1>
+                            </div>
+                        </>
+                    )
+                }
+            </Container>
         </>
     )
 };
