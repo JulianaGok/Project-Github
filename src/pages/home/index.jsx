@@ -17,6 +17,7 @@ import {
 export default function Home() {
     const [searchText, setSearchText] = useState('');
 
+
     return (
         <Container>
             <div className='content-left'>

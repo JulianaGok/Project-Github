@@ -36,15 +36,15 @@ export default function UserList({ props }) {
     const query = useQuery();
     const [searchText, setSearchText] = useState('');
     const [users, setUsers] = useState([]);
-    //const [setRepositories] = useState([]);
+    const [setRepositories] = useState([]);
 
     useEffect(() => {
         Api.getByUsername(query.get("text")).then(res => setUsers([...users, res.data]));
 
-        // Api.getReposByUsername(query.get("text")).then(res =>
-        //     setRepositories(res.data));
+        Api.getReposByUsername(query.get("text")).then(res =>
+            setRepositories(res.data));
 
-    }, //[query.get("text")]
+    }, [query, setRepositories, users]
 
     );
 
@@ -73,7 +73,7 @@ export default function UserList({ props }) {
                                     >{user.name}</Link>
                                 </Name>
                                 <br></br>
-                                <Namelogin>{user.login}</Namelogin>
+                                <Namelogin>@{user.login}</Namelogin>
 
                                 <div className="info">
                                     <Jobstyle src={Iconjob} alt="iconejob" />
