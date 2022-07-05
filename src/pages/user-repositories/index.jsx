@@ -11,12 +11,14 @@ import Iconlink from '../../../src/assets/iconlink.svg';
 import Iconjob from '../../../src/assets/person.svg';
 import Iconlocal from '../../../src/assets/iconlocal.svg';
 // import { Search } from "../../../src/assets/search.svg";
+import Arrow from '../../../src/assets/arrow.svg';
 import { Modaltag } from "../../components/modaltag"
 
 import {
     Container,
     Avatar,
     Searchinput,
+    Arrowstyle,
 } from './styled';
 
 function useQuery() {
@@ -92,7 +94,7 @@ export default function UseRepositories({ props }) {
                         repositories.map((repo, index) =>
                             <div key={index}>
                                 <div className="repo-info">
-                                    <h1>{repo.name}</h1>
+                                    <h1>{repo.name} <Arrowstyle src={Arrow} alt="arrow" /></h1>
                                     <br></br>
                                     <p>{repo.description}</p>
                                     <Modaltag />
@@ -111,6 +113,7 @@ export default function UseRepositories({ props }) {
                             </div>
                         )
                     }
+
                 </div>
             </Container>
         </>

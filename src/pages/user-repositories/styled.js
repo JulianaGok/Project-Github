@@ -134,3 +134,8 @@ export const Searchinput = styled.input`
       margin-left: 2%;
       margin-top:4rem;
     }`
+
+export const Arrowstyle  = styled.img`
+width:4rem;
+height: 1rem;
+`

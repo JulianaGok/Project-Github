@@ -76,24 +76,24 @@ export const Trashstyle  = styled.img`
     height: 3rem;
     width:75%;`
 
-export const Newinput = styled.input`
-    position: absolute;
-    width: 265px;
-    height: 60px;
-    left: 70%;
-    top: 15px;
-    padding: 10px 20px;
-    border: 1px solid var(--white-200);
-    border-radius: 50px;
-    background-color: var(--white);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    @media (max-width:750px) {
-        left: 30%;
-        padding: 9px 10px;
-        width: 10rem;
-  }`
+// export const Newinput = styled.input`
+//     position: absolute;
+//     width: 265px;
+//     height: 60px;
+//     left: 70%;
+//     top: 15px;
+//     padding: 10px 20px;
+//     border: 1px solid var(--white-200);
+//     border-radius: 50px;
+//     background-color: var(--white);
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 16px;
+//     @media (max-width:750px) {
+//         left: 30%;
+//         padding: 9px 10px;
+//         width: 10rem;
+//   }`
 
 export const Newbutton = styled.button`
     position: absolute;
