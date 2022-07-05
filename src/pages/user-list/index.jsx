@@ -31,12 +31,12 @@ export default function UserList({ props }) {
 
     useEffect(() => {
         Api.getByUsername(query.get("text")).then(res => setUser(res.data));
-        Api.getReposByUsername(query.get("text")).then(res =>
-            setRepositories(res.data));
+        Api.getReposByUsername(query.get("text")).then(res => setRepositories(res.data));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const getUser = () => {
-        Api.getByUsername(searchText).then(res => setUser([...user, res.data]));
+        Api.getByUsername(searchText).then(res => setUser([res.data]));
     }
 
     return (

@@ -119,7 +119,7 @@ export const Searchinput = styled.input`
     display: flex;
     width: 26rem;
     height:4rem;
-    margin-top:11rem;
+    margin-top:12rem;
     padding: 14px 30px;
     border: 1px solid var(--white-200);
     border-radius: 4px;
