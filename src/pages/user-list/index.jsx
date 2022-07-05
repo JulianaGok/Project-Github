@@ -34,7 +34,7 @@ export default function UserList({ props }) {
         Api.getByUsername(query.get("text")).then(res => setUser(res.data));
         Api.getReposByUsername(query.get("text")).then(res =>
             setRepositories(res.data));
-    }, [query]);
+    }, [query, setRepositories]);
 
     const getUser = () => {
         Api.getByUsername(searchText).then(res => setUser([res.data]));
