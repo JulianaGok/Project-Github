@@ -12,10 +12,10 @@ export const Container = styled.div`
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
     @media (max-width: 800px) {
-        padding: 10px 10px;
-        margin:7px 7px;
-        width:97vw;
-        height:26vh;
+        padding: 20px 20px;
+        margin:20px 20px;
+        width:90vw;
+        height:35vh;
     }
 
 div.name-login{
@@ -30,7 +30,7 @@ div.name-login{
     color: var(--black);
     cursor: pointer;
     @media (max-width: 800px) {
-        padding-left:5%;
+        padding-left:1%;
     }
 }
 
@@ -50,7 +50,11 @@ div.info{
       margin-left: 4px;
       margin-right:10px;
     }
-}`
+}
+@media (max-width: 800px) {
+    height: 20rem;
+    }
+`
 
 export const Avatar  = styled.img`
   &.avatar  {
@@ -67,10 +71,7 @@ export const Arrowstyle  = styled.img`
 export const Trashstyle  = styled.img`
     display: flex;
     height: 3rem;
-    width:90%;
-    @media (max-width: 800px) {
-    height: 2rem;
-    }`
+    width:90%;`
 
 export const Newinput = styled.input`
     position: absolute;
@@ -86,8 +87,9 @@ export const Newinput = styled.input`
     font-weight: 400;
     font-size: 16px;
     @media (max-width:750px) {
-        left: 26%;
+        left: 30%;
         padding: 9px 10px;
+        width: 10rem;
   }`
 
 export const Newbutton = styled.button`
@@ -123,4 +125,8 @@ export const Name = styled.h1`
     line-height: 27px;
     a {
         color:var(--black);
-    } `
+    } 
+    @media (max-width:800px) {
+        width: 5rem;
+        height: 2rem;
+  }`

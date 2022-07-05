@@ -10,7 +10,7 @@ import Flag from '../../../src/assets/flag.svg';
 import Iconlink from '../../../src/assets/iconlink.svg';
 import Iconjob from '../../../src/assets/person.svg';
 import Iconlocal from '../../../src/assets/iconlocal.svg';
-import { Search } from "../../../src/assets/search.svg";
+// import { Search } from "../../../src/assets/search.svg";
 import { Modaltag } from "../../components/modaltag"
 
 import {
@@ -35,7 +35,7 @@ export default function UseRepositories({ props }) {
         // Api.getByUsername(query.get("text")).then(res => console.log(res, "oii"));
         Api.getReposByUsername(query.get("text")).then(res =>
             setRepositories(res.data));
-    }, []);
+    }, [query]);
 
     return (
         <>
@@ -84,6 +84,7 @@ export default function UseRepositories({ props }) {
                 <div className="user-right">
 
                     <Searchinput
+                        img src="../../assets/search.svg"
                         placeholder="Buscar um repositório..."
                         type={"text"} />
                     {

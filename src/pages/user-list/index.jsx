@@ -22,7 +22,6 @@ import {
 function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
-
 export { useQuery };
 
 export default function UserList({ props }) {
@@ -33,14 +32,12 @@ export default function UserList({ props }) {
 
     useEffect(() => {
         Api.getByUsername(query.get("text")).then(res => setUser(res.data));
-
         Api.getReposByUsername(query.get("text")).then(res =>
             setRepositories(res.data));
-
-    }, []);
+    }, [query]);
 
     const getUser = () => {
-        // Api.getByUsername(searchText).then(res => setUsers([...user, res.data]));
+        Api.getByUsername(searchText).then(res => setUser([res.data]));
     }
 
     return (
@@ -49,8 +46,6 @@ export default function UserList({ props }) {
             <Newinput value={searchText} onChange={e => setSearchText(e.target.value)}
                 type={"text"} placeholder="@username" />
             <Newbutton onClick={() => getUser()}> Adicionar Novo</Newbutton>
-
-
             <>
                 <Container>
                     <Avatar className="avatar"
@@ -65,7 +60,6 @@ export default function UserList({ props }) {
                         </Name>
                         <br></br>
                         <h3>@{user.login}</h3>
-
                         <div className="info">
                             <img src={Iconjob} alt="iconejob" />
                             <p>{user.company}</p>
@@ -79,8 +73,6 @@ export default function UserList({ props }) {
                     <Trashstyle src={Trash} alt="trash" />
                 </Container>
             </>
-
-
         </>
     );
 };

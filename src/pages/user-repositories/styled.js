@@ -74,7 +74,7 @@ div.user-bio {
       margin-right:3px;
     }
     @media (max-width: 800px) {
-      width: 95%;
+      width: 90%;
     }
   }
 
@@ -86,7 +86,7 @@ div.important {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   @media (max-width: 800px) {
-      width: 95%;
+      width: 90%;
     }
   }`
 
@@ -126,5 +126,5 @@ export const Searchinput = styled.input`
     font-size: 16px;
     @media (max-width: 800px) {
       margin-top:0rem;
-      width: 97%;
+      width: 90%;
     }`
