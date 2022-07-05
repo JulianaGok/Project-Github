@@ -10,6 +10,7 @@ import {
     Box,
     Taginput,
     Buttontag,
+    Container,
 } from './styled';
 
 Modal.setAppElement('#root');
@@ -28,10 +29,11 @@ export function Modaltag() {
     }
 
     return (
-        <>
+        <div>
             <Buttontag
                 onClick={hardleOpenNewTagModal} >Adicionar tags
             </Buttontag>
+
 
             <Modal
                 isOpen={isNewTagModalOpen}
@@ -53,10 +55,10 @@ export function Modaltag() {
                     <Buttoncancel
                         onClick={hardleCloseNewTagModal}> Cancelar
                     </Buttoncancel>
-
                 </Box>
             </Modal>
-        </>
+
+        </div>
     );
 };
 export default Modal;

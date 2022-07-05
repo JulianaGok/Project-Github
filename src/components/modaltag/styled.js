@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Box = styled.style`
+export const Box = styled.div`
   &.boxstyle {
     display:flex;
     position: absolute;
@@ -9,10 +9,10 @@ export const Box = styled.style`
     width: 500px;
     height: 500px;
     left: 40%;
-    top:18rem;
+    top:10rem;
     box-sizing:border-box;
     background:var(--white);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
     border-radius: 8px;
     @media (max-width: 800px) {
       width: 90%;

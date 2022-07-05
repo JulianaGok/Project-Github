@@ -5,6 +5,7 @@ export const Container = styled.div`
     flex:1;
     width:100vw;
     height:73vh;
+    margin-top: 4rem;
     justify-content:center;
     align-items:center;
     font-family: 'Mulish';

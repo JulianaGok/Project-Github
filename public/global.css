@@ -28,3 +28,8 @@ a {
     text-decoration: none;
 }
 
+div.ReactModal__Content--after-open{
+    background: rgba(0, 0, 0, 0.72) !important;
+
+  }
+
