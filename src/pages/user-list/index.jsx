@@ -34,7 +34,7 @@ export default function UserList({ props }) {
         Api.getByUsername(query.get("text")).then(res => setUser(res.data));
         Api.getReposByUsername(query.get("text")).then(res =>
             setRepositories(res.data));
-    }, [query, setRepositories]);
+    }, []);
 
     const getUser = () => {
         Api.getByUsername(searchText).then(res => setUser([res.data]));
@@ -43,9 +43,14 @@ export default function UserList({ props }) {
     return (
         <>
             <Header />
-            <Newinput value={searchText} onChange={e => setSearchText(e.target.value)}
+            <Newbutton type="button">
+                <Link to={`/?text=${searchText}`} onClick={() => getUser()}>
+                    Adicionar Novo</Link>
+            </Newbutton>
+
+            {/* <Newinput value={searchText} onChange={e => setSearchText(e.target.value)}
                 type={"text"} placeholder="@username" />
-            <Newbutton onClick={() => getUser()}> Adicionar Novo</Newbutton>
+            <Newbutton onClick={() => getUser()}> Adicionar Novo</Newbutton> */}
             <>
                 <Container>
                     <Avatar className="avatar"

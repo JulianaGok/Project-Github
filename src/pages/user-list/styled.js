@@ -62,7 +62,10 @@ export const Avatar  = styled.img`
     width:100px;
     height:100px;
     border-radius:50%;
-}`
+@media (max-width: 800px) {
+    width:5rem;
+    height:5rem;
+    }}`
 
 export const Arrowstyle  = styled.img`
     width:4rem;
@@ -71,26 +74,26 @@ export const Arrowstyle  = styled.img`
 export const Trashstyle  = styled.img`
     display: flex;
     height: 3rem;
-    width:90%;`
+    width:75%;`
 
-export const Newinput = styled.input`
-    position: absolute;
-    width: 265px;
-    height: 60px;
-    left: 70%;
-    top: 15px;
-    padding: 10px 20px;
-    border: 1px solid var(--white-200);
-    border-radius: 50px;
-    background-color: var(--white);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    @media (max-width:750px) {
-        left: 30%;
-        padding: 9px 10px;
-        width: 10rem;
-  }`
+// export const Newinput = styled.input`
+//     position: absolute;
+//     width: 265px;
+//     height: 60px;
+//     left: 70%;
+//     top: 15px;
+//     padding: 10px 20px;
+//     border: 1px solid var(--white-200);
+//     border-radius: 50px;
+//     background-color: var(--white);
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 16px;
+//     @media (max-width:750px) {
+//         left: 30%;
+//         padding: 9px 10px;
+//         width: 10rem;
+//   }`
 
 export const Newbutton = styled.button`
     position: absolute;
@@ -108,6 +111,9 @@ export const Newbutton = styled.button`
     line-height: 50px;
     text-align: center;
     cursor: pointer;
+    a {
+        color:var(--white);
+    }
     @media (max-width: 750px) {
             left: 56%;
             width: 150px;

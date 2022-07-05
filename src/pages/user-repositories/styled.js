@@ -29,7 +29,8 @@ div.repo-info {
       margin-bottom:1rem;
     }   
     @media (max-width: 800px) {
-      width: 95%;
+      width: 98%;
+   
     }}
 
   div.info{
@@ -45,8 +46,12 @@ div.repo-info {
     color:var(--grey);
     p {
       margin-left: 4px;
-      margin-right:10px;
-    }}
+      margin-right:10px;}
+
+    @media (max-width: 800px) { 
+      display: inline;
+      margin-left: 4%;
+    } }
 
 div.user-info {
     width: 20rem;
@@ -57,9 +62,9 @@ div.user-info {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
     @media (max-width: 800px) {
-      width: 95%;
-    }
-  }
+      width: 98%;
+      margin-left: 2%;
+    }}
 
 div.user-bio {
     width: 324px;
@@ -74,9 +79,9 @@ div.user-bio {
       margin-right:3px;
     }
     @media (max-width: 800px) {
-      width: 90%;
-    }
-  }
+      width: 98%;
+      margin-left: 2%;
+    } }
 
 div.important {
   width: 324px;
@@ -86,9 +91,9 @@ div.important {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   @media (max-width: 800px) {
-      width: 90%;
-    }
-  }`
+      width: 98%;
+      margin-left: 2%;
+    }}`
 
 export const Avatar = styled.img`
   &.avatar  {
@@ -125,6 +130,7 @@ export const Searchinput = styled.input`
     font-weight: 400;
     font-size: 16px;
     @media (max-width: 800px) {
-      margin-top:0rem;
-      width: 90%;
+      width: 98%;
+      margin-left: 2%;
+      margin-top:4rem;
     }`

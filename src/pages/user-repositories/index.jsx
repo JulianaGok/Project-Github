@@ -35,7 +35,7 @@ export default function UseRepositories({ props }) {
         // Api.getByUsername(query.get("text")).then(res => console.log(res, "oii"));
         Api.getReposByUsername(query.get("text")).then(res =>
             setRepositories(res.data));
-    }, [query]);
+    }, []);
 
     return (
         <>
