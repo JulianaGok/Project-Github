@@ -3,12 +3,22 @@ import styled from "styled-components"
 export const Box = styled.style`
   &.boxstyle {
     display:flex;
+    position: absolute;
     justify-content:center;
     align-items:center;
+    width: 500px;
+    height: 500px;
+    left: 40%;
+    top:18rem;
+    box-sizing:border-box;
+    background:var(--white);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.24);
     border-radius: 8px;
     @media (max-width: 800px) {
-      width: 80%;
+      width: 90%;
+      height: 85%;
+      left: 5%;
+      top:5%;
     }}`
 
 export const Buttontag = styled.button`
