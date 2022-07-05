@@ -5,7 +5,7 @@ export const Container = styled.div`
     justify-content:center;
     align-items:center;
     width:90vw;
-    height:16vh;
+    height:20vh;
     padding: 30px 40px;
     margin:30px 60px;
     background:var(--white);
@@ -46,6 +46,10 @@ div.info{
     font-size: 10px;
     line-height: 15px;
     color:var(--grey);
+    p {
+      margin-left: 4px;
+      margin-right:10px;
+    }
 }`
 
 export const Avatar  = styled.img`
@@ -67,13 +71,6 @@ export const Trashstyle  = styled.img`
     @media (max-width: 800px) {
     height: 2rem;
     }`
-export const Jobstyle  = styled.img``
-export const Localtyle  = styled.img``
-export const Starstyle  = styled.img``
-export const Namelogin = styled.h2``
-export const At = styled.h2``
-export const Local = styled.h2``
-export const Public = styled.h2``
 
 export const Newinput = styled.input`
     position: absolute;

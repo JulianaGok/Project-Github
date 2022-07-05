@@ -12,17 +12,10 @@ import Trash from '../../../src/assets/trash.svg';
 import {
     Container,
     Name,
-    Namelogin,
-    At,
-    Local,
-    Public,
     Avatar,
     Arrowstyle,
     Newinput,
     Newbutton,
-    Jobstyle,
-    Localtyle,
-    Starstyle,
     Trashstyle,
 } from './styled';
 
@@ -35,21 +28,19 @@ export { useQuery };
 export default function UserList({ props }) {
     const query = useQuery();
     const [searchText, setSearchText] = useState('');
-    const [users, setUsers] = useState([]);
-    const [setRepositories] = useState([]);
+    const [user, setUser] = useState({});
+    const [repositories, setRepositories] = useState([]);
 
     useEffect(() => {
-        Api.getByUsername(query.get("text")).then(res => setUsers([...users, res.data]));
+        Api.getByUsername(query.get("text")).then(res => setUser(res.data));
 
         Api.getReposByUsername(query.get("text")).then(res =>
             setRepositories(res.data));
 
-    }, [query, setRepositories, users]
-
-    );
+    }, []);
 
     const getUser = () => {
-        Api.getByUsername(searchText).then(res => setUsers([...users, res.data]));
+        // Api.getByUsername(searchText).then(res => setUsers([...user, res.data]));
     }
 
     return (
@@ -58,38 +49,38 @@ export default function UserList({ props }) {
             <Newinput value={searchText} onChange={e => setSearchText(e.target.value)}
                 type={"text"} placeholder="@username" />
             <Newbutton onClick={() => getUser()}> Adicionar Novo</Newbutton>
-            {
-                users.map(user =>
-                    <>
-                        <Container>
-                            <Avatar className="avatar"
-                                src={user.avatar_url}
-                                alt="avatar">
-                            </Avatar>
 
-                            <div className="name-login">
-                                <Name type="button">
-                                    <Link to={`/user-repositories?text=${user.login}`}
-                                    >{user.name}</Link>
-                                </Name>
-                                <br></br>
-                                <Namelogin>@{user.login}</Namelogin>
 
-                                <div className="info">
-                                    <Jobstyle src={Iconjob} alt="iconejob" />
-                                    <At>{user.company}</At>
-                                    <Localtyle src={Iconlocal} alt="iconlocal" />
-                                    <Local>{user.location}</Local>
-                                    <Starstyle src={Star} alt="star" />
-                                    <Public>{user.public_repos}</Public>
-                                </div>
-                            </div>
-                            <Arrowstyle src={Arrow} alt="arrow" />
-                            <Trashstyle src={Trash} alt="trash" />
-                        </Container>
-                    </>
-                )
-            }
+            <>
+                <Container>
+                    <Avatar className="avatar"
+                        src={user.avatar_url}
+                        alt="avatar">
+                    </Avatar>
+
+                    <div className="name-login">
+                        <Name type="button">
+                            <Link to={`/user-repositories?text=${user.login}`}
+                            >{user.name}</Link>
+                        </Name>
+                        <br></br>
+                        <h3>@{user.login}</h3>
+
+                        <div className="info">
+                            <img src={Iconjob} alt="iconejob" />
+                            <p>{user.company}</p>
+                            <img src={Iconlocal} alt="iconlocal" />
+                            <p>{user.location}</p>
+                            <img src={Star} alt="star" />
+                            <p>{user.public_repos}</p>
+                        </div>
+                    </div>
+                    <Arrowstyle src={Arrow} alt="arrow" />
+                    <Trashstyle src={Trash} alt="trash" />
+                </Container>
+            </>
+
+
         </>
     );
 };
