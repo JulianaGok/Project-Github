@@ -14,7 +14,6 @@ import {
     Name,
     Avatar,
     Arrowstyle,
-    Newinput,
     Newbutton,
     Trashstyle,
 } from './styled';
@@ -26,7 +25,7 @@ export { useQuery };
 
 export default function UserList({ props }) {
     const query = useQuery();
-    const [searchText, setSearchText] = useState('');
+    const [searchText,] = useState('');
     const [user, setUser] = useState({});
     const [setRepositories] = useState([]);
 
@@ -37,7 +36,7 @@ export default function UserList({ props }) {
     }, []);
 
     const getUser = () => {
-        Api.getByUsername(searchText).then(res => setUser([res.data]));
+        Api.getByUsername(searchText).then(res => setUser([...user, res.data]));
     }
 
     return (
