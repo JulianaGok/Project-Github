@@ -4,8 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex:1;
     width:100vw;
-    height:73vh;
-    margin-top: 4rem;
+    margin-top: 1rem;
     justify-content:center;
     align-items:center;
     font-family: 'Mulish';
@@ -57,13 +56,14 @@ div.user-info {
     width: 20rem;
     padding: 20px 40px;
     margin:0px 30px;
-    margin-top:1rem;
+    margin-bottom:11rem;
     background:var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
     @media (max-width: 800px) {
       width: 98%;
       margin-left: 2%;
+      margin-top:2rem;
     }}
 
 div.user-bio {
@@ -71,6 +71,7 @@ div.user-bio {
     left: 25rem;
     padding: 30px 40px;
     margin:20px 30px;
+  
     background: var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
@@ -119,7 +120,7 @@ export const Searchinput = styled.input`
     display: flex;
     width: 26rem;
     height:4rem;
-    margin-top:12rem;
+    /* margin-top:10rem; */
     padding: 14px 30px;
     border: 1px solid var(--white-200);
     border-radius: 4px;

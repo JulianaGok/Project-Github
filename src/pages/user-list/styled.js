@@ -5,9 +5,9 @@ export const Container = styled.div`
     justify-content:center;
     align-items:center;
     width:90vw;
-    height:20vh;
+    /* height:20vh; */
     padding: 30px 40px;
-    margin:30px 60px;
+    margin:20px 60px;
     background:var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
@@ -15,13 +15,11 @@ export const Container = styled.div`
         padding: 20px 20px;
         margin:20px 20px;
         width:90vw;
-        height:35vh;
-    }
+        height:35vh; }
 
 div.name-login{
     flex-direction:column;
     padding: 10px 20px;
-    height:10vh;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
@@ -39,7 +37,7 @@ div.info{
     flex-direction: row;
     height: 1rem;
     left:2rem;
-    margin-top:3rem;
+    margin-top:2rem;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
@@ -53,8 +51,7 @@ div.info{
 }
 @media (max-width: 800px) {
     height: 20rem;
-    }
-`
+    }`
 
 export const Avatar  = styled.img`
   &.avatar  {
@@ -68,32 +65,15 @@ export const Avatar  = styled.img`
     }}`
 
 export const Arrowstyle  = styled.img`
-    width:4rem;
+    width:3rem;
+    margin-bottom:4rem;
     height: 2rem;
     `
 export const Trashstyle  = styled.img`
     display: flex;
     height: 3rem;
-    width:75%;`
-
-// export const Newinput = styled.input`
-//     position: absolute;
-//     width: 265px;
-//     height: 60px;
-//     left: 70%;
-//     top: 15px;
-//     padding: 10px 20px;
-//     border: 1px solid var(--white-200);
-//     border-radius: 50px;
-//     background-color: var(--white);
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 16px;
-//     @media (max-width:750px) {
-//         left: 30%;
-//         padding: 9px 10px;
-//         width: 10rem;
-//   }`
+    margin-bottom:4rem;
+    width:80%;`
 
 export const Newbutton = styled.button`
     position: absolute;
@@ -117,7 +97,8 @@ export const Newbutton = styled.button`
     @media (max-width: 750px) {
             left: 56%;
             width: 150px;
-            font-size: 16px; }`
+            font-size: 16px;
+    }`
 
 export const Name = styled.h1`
     width: 191px;
