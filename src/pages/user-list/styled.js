@@ -5,7 +5,6 @@ export const Container = styled.div`
     justify-content:center;
     align-items:center;
     width:90vw;
-    /* height:20vh; */
     padding: 30px 40px;
     margin:20px 60px;
     background:var(--white);
