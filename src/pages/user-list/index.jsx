@@ -28,7 +28,7 @@ export default function UserList({ props }) {
     const query = useQuery();
     const [searchText, setSearchText] = useState('');
     const [user, setUser] = useState({});
-    const [repositories, setRepositories] = useState([]);
+    const [setRepositories] = useState([]);
 
     useEffect(() => {
         Api.getByUsername(query.get("text")).then(res => setUser(res.data));
