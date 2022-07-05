@@ -10,15 +10,12 @@ import {
     Box,
     Taginput,
     Buttontag,
-    Container,
 } from './styled';
 
 Modal.setAppElement('#root');
 
 export function Modaltag() {
-
-    const [isNewTagModalOpen, setIsNewTagModalOpen]
-        = useState(false);
+    const [isNewTagModalOpen, setIsNewTagModalOpen] = useState(false);
 
     function hardleOpenNewTagModal() {
         setIsNewTagModalOpen(true);
@@ -34,30 +31,23 @@ export function Modaltag() {
                 onClick={hardleOpenNewTagModal} >Adicionar tags
             </Buttontag>
 
-
             <Modal
                 isOpen={isNewTagModalOpen}
                 onRequestClose={hardleCloseNewTagModal}
             >
                 <Box className='boxstyle'>
                     <Title>Adicionar tags</Title>
-
                     <Inputtagmodal
                         type="tags"
                         className='iconfilter'
                         placeholder="Adicionar tags..." />
-
-                    <Taginput> Sugestões
-
-                    </Taginput>
+                    <Taginput> Sugestões</Taginput>
                     <Buttonsaved>Salvar</Buttonsaved>
-
                     <Buttoncancel
                         onClick={hardleCloseNewTagModal}> Cancelar
                     </Buttoncancel>
                 </Box>
             </Modal>
-
         </div>
     );
 };

@@ -2,7 +2,8 @@
     --white: #ffffff;
     --white-200: #E5E5E5;
     --grey: #7E7E7E;
-    --black: #000000; 
+    --black: #000000;
+    --blue: #0017FF; 
 }
 
 * {
@@ -30,6 +31,5 @@ a {
 
 div.ReactModal__Content--after-open{
     background: rgba(0, 0, 0, 0.72) !important;
-
   }
 

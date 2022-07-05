@@ -22,7 +22,7 @@ div.repo-info {
     padding: 30px 40px;
     margin:20px 30px;
     margin-left: 4px;
-    background:#ffffff;
+    background:var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px; 
     p {
@@ -30,8 +30,7 @@ div.repo-info {
     }   
     @media (max-width: 800px) {
       width: 95%;
-    }
-  }
+    }}
 
   div.info{
     display: flex;
@@ -54,7 +53,7 @@ div.user-info {
     padding: 20px 40px;
     margin:0px 30px;
     margin-top:1rem;
-    background: #FFFFFF;
+    background:var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
     @media (max-width: 800px) {
@@ -67,7 +66,7 @@ div.user-bio {
     left: 25rem;
     padding: 30px 40px;
     margin:20px 30px;
-    background: #FFFFFF;
+    background: var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
     p {
@@ -83,7 +82,7 @@ div.important {
   width: 324px;
   padding: 30px 40px;
   margin:20px 30px;
-  background: #FFFFFF;
+  background:var(--white);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   @media (max-width: 800px) {
@@ -117,9 +116,9 @@ export const Searchinput = styled.input`
     height:4rem;
     margin-top:11rem;
     padding: 14px 30px;
-    border: 1px solid #E5E5E5;
+    border: 1px solid var(--white-200);
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color:var(--white);
     cursor: pointer;
     font-family: 'Roboto';
     font-style: normal;

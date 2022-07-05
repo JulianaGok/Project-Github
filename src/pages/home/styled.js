@@ -68,7 +68,7 @@ export const Title = styled.h1`
     font-weight: 700;
     font-size: 24px;
     line-height: 10px;
-    color:  #000000;`
+    color:var(--black);`
 
 export const Text = styled.h2`
     height: 40px;
@@ -77,15 +77,15 @@ export const Text = styled.h2`
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #7E7E7E;`
+    color: var(--grey);`
 
 export const Input = styled.input`
     width: 26rem;
     height:4rem;
     padding: 14px 30px;
-    border: 1px solid #E5E5E5;
+    border: 1px solid var(--white-200);
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color:var(--white);
     cursor: pointer;
     font-family: 'Roboto';
     font-style: normal;
@@ -93,14 +93,13 @@ export const Input = styled.input`
     font-size: 16px;
     @media (max-width: 800px) {
         width: 20rem;
-} 
-`
+}`
+
 export const Button = styled.button`
     width: 26rem;
     margin-top:2rem;
     border-radius: 100px;
     background:var(--black);
-
     font-family: 'Mulish';
     font-weight: 400;
     font-size: 20px;

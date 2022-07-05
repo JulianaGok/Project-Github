@@ -26,14 +26,14 @@ display: flex;
 padding: 5px 20px;
 background: rgba(0, 23, 255, 0.08);
 border-radius: 100px;
-border-color: #0017FF;
+border-color: var(--blue);
 
 font-family: 'Mulish';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 20px;
-color: #0017FF;`
+color: var(--blue);`
 
 export const Input = styled.input`
     display: flex;
@@ -158,7 +158,7 @@ export const Taginput = styled.text`
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #7E7E7E;
+  color: var(--grey);
   padding: 14px 30px;
   width: 420px;
   height: 170px;
@@ -169,4 +169,4 @@ export const Taginput = styled.text`
   border-radius: 4px;
   @media (max-width: 800px) {
       width: 80%;
-    }`
+}`

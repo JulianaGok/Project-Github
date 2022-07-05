@@ -80,7 +80,7 @@ export const Newinput = styled.input`
     left: 70%;
     top: 15px;
     padding: 10px 20px;
-    border: 1px solid #E5E5E5;
+    border: 1px solid var(--white-200);
     border-radius: 50px;
     background-color: var(--white);
     font-style: normal;
