@@ -16,7 +16,6 @@ export const Box = styled.div`
     border-radius: 8px;
     @media (max-width: 800px) {
       width: 90%;
-      height: 85%;
       left: 5%;
       top:5%;
     }}`

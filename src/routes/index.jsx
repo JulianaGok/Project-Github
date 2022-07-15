@@ -4,15 +4,13 @@ import UserList from "../pages/user-list";
 import UserRepositories from "../pages/user-repositories";
 
 export default function Routes() {
-    return (
-
-        <Router>
-            <>
-                <Route exact path="/" component={Home} />
-                <Route path="/user-list" component={UserList} />
-                <Route path="/user-repositories" component={UserRepositories} />
-            </>
-        </Router>
-
-    );
+  return (
+    <Router>
+      <>
+        <Route exact path="/" component={Home} />
+        <Route path="/user-list" component={UserList} />
+        <Route path="/user-repositories" component={UserRepositories} />
+      </>
+    </Router>
+  );
 }
