@@ -27,9 +27,6 @@ background: rgba(0, 23, 255, 0.08);
 border-radius: 100px;
 border-color: var(--blue);
 
-font-family: 'Mulish';
-font-style: normal;
-font-weight: 400;
 font-size: 16px;
 line-height: 20px;
 color: var(--blue);`
@@ -130,7 +127,6 @@ export const Buttoncancel = styled.button`
   background: var(--white);
   border-radius: 100px;
   
-  font-weight: 400;
   font-size: 20px;
   line-height: 25px;
   text-align: center;

@@ -40,9 +40,7 @@ export const Container = styled.div`
 export const Phrase = styled.h2`
   display: flex;
   width: 80%;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 400px;
+
   font-size: 40px;
   line-height: 55px;
   text-align: center;
@@ -68,8 +66,6 @@ export const Logo = styled.img`
 `;
 export const Title = styled.h1`
   height: 30px;
-  font-style: normal;
-  font-family: "Mulish";
   font-weight: 700;
   font-size: 24px;
   line-height: 10px;
@@ -78,9 +74,6 @@ export const Title = styled.h1`
 
 export const Text = styled.h2`
   height: 40px;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: var(--grey);
@@ -94,7 +87,7 @@ export const Input = styled.input`
   border-radius: 4px;
   background-color: var(--white);
   cursor: pointer;
-  font-weight: 400;
+
   font-size: 16px;
   @media (max-width: 800px) {
     width: 20rem;
@@ -106,7 +99,7 @@ export const Button = styled.button`
   margin-top: 2rem;
   border-radius: 100px;
   background: var(--black);
-  font-weight: 400;
+
   font-size: 20px;
   line-height: 50px;
   a {

@@ -8,7 +8,6 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: row;
 
-  font-weight: 400;
   font-size: 13px;
   line-height: 20px;
   @media (max-width: 800px) {

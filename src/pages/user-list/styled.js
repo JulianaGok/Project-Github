@@ -38,7 +38,6 @@ export const Container = styled.div`
     left: 2rem;
     margin-top: 2rem;
 
-    font-weight: 400;
     font-size: 10px;
     line-height: 15px;
     color: var(--grey);
