@@ -54,6 +54,20 @@ export const Container = styled.div`
   }
 `;
 
+export const Trashstyle = styled.button`
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  margin-bottom: 4rem;
+  margin-left: 40%;
+  cursor: pointer;
+  @media (max-width: 800px) {
+    margin-left: 10%;
+    }
+`;
+
 export const Avatar = styled.img`
   &.avatar {
     display: flex;
@@ -71,12 +85,6 @@ export const Arrowstyle = styled.img`
   width: 3rem;
   margin-bottom: 4rem;
   height: 2rem;
-`;
-export const Trashstyle = styled.img`
-  display: flex;
-  height: 3rem;
-  margin-bottom: 4rem;
-  width: 80%;
 `;
 
 export const Newbutton = styled.button`

@@ -15,7 +15,7 @@ export const Box = styled.div`
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
     border-radius: 8px;
     @media (max-width: 800px) {
-      width: 90%;
+      width: 90%; 
       left: 5%;
       top:5%;
     }}`

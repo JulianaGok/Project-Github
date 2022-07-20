@@ -8,6 +8,7 @@ import Iconjob from "../../../src/assets/iconjob.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
 import Star from "../../../src/assets/star.svg";
 import Trash from "../../../src/assets/trash.svg";
+// import Axios from "../../services/api";
 
 import {
   Container,
@@ -18,6 +19,7 @@ import {
   Trashstyle,
 } from "./styled";
 
+
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -27,19 +29,24 @@ export default function UserList({ props }) {
   const query = useQuery();
   const [searchText] = useState("");
   const [user, setUser] = useState({});
-  const [setRepositories] = useState([]);
+  // const [setRepositories] = useState([]);
 
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
-    Api.getReposByUsername(query.get("text")).then((res) =>
-      setRepositories(res.data)
-    );
+    // Api.getReposByUsername(query.get("text")).then((res) =>
+    //   setRepositories(res.data)
+    // );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getUser = () => {
     Api.getByUsername(searchText).then((res) => setUser([res.data]));
   };
+
+  // const handleDelete = user => {
+  //  Api.handleDelete()
+  //   setUser(user.delete);
+  // }
 
   return (
     <>
@@ -80,8 +87,14 @@ export default function UserList({ props }) {
           </div>
           <Arrowstyle src={Arrow} alt="arrow" />
 
-          
-          <Trashstyle src={Trash} alt="trash"/>
+          <Trashstyle>
+            <img
+              src={Trash}
+              alt="trash"
+              type="deleteUser"
+              // onClick={()=> (user.delete)}
+            />
+          </Trashstyle>
         </Container>
       </>
     </>

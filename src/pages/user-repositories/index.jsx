@@ -10,11 +10,11 @@ import Flag from "../../../src/assets/flag.svg";
 import Iconlink from "../../../src/assets/iconlink.svg";
 import Iconjob from "../../../src/assets/person.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
-// import { Search } from "../../../src/assets/search.svg";
+import Search from "../../../src/assets/search.svg";
 import Arrow from "../../../src/assets/arrow.svg";
 import { Modaltag } from "../../components/modaltag";
 
-import { Container, Avatar, Searchinput, Arrowstyle } from "./styled";
+import { Container, Avatar, Arrowstyle } from "./styled";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -26,6 +26,8 @@ export default function UseRepositories({ props }) {
   const query = useQuery();
   const [user, setUser] = useState({});
   const [repositories, setRepositories] = useState([]);
+// const date = new Intl.DateTimeFormat('pt-BR', {dateStyle:'shot', timeStyle: 'shot'}).format (createdAt.toDate())}> 
+// <data-id= "${repo.updated_at}"/>
 
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
@@ -84,18 +86,34 @@ export default function UseRepositories({ props }) {
               <h1>Destaques</h1>
               <br></br>
               <img src={Flag} alt="iconejob" />
+              <p>{user.public_repos}</p>
             </div>
           </>
         </div>
 
         {/* Parte dos repositorios do usuario e os inputs de pesquisa */}
         <div className="user-right">
-          <Searchinput
-            img
-            src="../../assets/search.svg"
-            placeholder="Buscar um repositório..."
-            type={"text"}
+        {/* <Searchinput>
+            <img
+              src={Search}
+              alt="trash"
+              placeholder="Buscar um repositório..."
+              type={"text"}
+            />
+          </Searchinput> */}
+          <div className="searchinput">
+         <imput>
+          <img
+          // value={repositories}
+          // onChange={(e) => setRepositories(e.target.value)}
+              src={Search}
+              alt="trash"
+              placeholder="Buscar um repositório..."
+              type={"text"}
           />
+        </imput>
+          </div>
+
           {repositories.map((repo, index) => (
             <div key={index}>
               <div className="repo-info">
