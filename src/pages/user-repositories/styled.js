@@ -7,8 +7,7 @@ export const Container = styled.div`
   margin-top: 1rem;
   justify-content: center;
   flex-direction: row;
-  font-family: "Mulish";
-  font-style: normal;
+
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;

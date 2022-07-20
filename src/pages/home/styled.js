@@ -94,8 +94,6 @@ export const Input = styled.input`
   border-radius: 4px;
   background-color: var(--white);
   cursor: pointer;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   @media (max-width: 800px) {
@@ -108,7 +106,6 @@ export const Button = styled.button`
   margin-top: 2rem;
   border-radius: 100px;
   background: var(--black);
-  font-family: "Mulish";
   font-weight: 400;
   font-size: 20px;
   line-height: 50px;

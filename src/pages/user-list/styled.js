@@ -20,8 +20,7 @@ export const Container = styled.div`
   div.name-login {
     flex-direction: column;
     padding: 10px 20px;
-    font-family: "Mulish";
-    font-style: normal;
+
     font-weight: 700;
     font-size: 17px;
     line-height: 27px;
@@ -38,8 +37,7 @@ export const Container = styled.div`
     height: 1rem;
     left: 2rem;
     margin-top: 2rem;
-    font-family: "Mulish";
-    font-style: normal;
+
     font-weight: 400;
     font-size: 10px;
     line-height: 15px;
@@ -96,8 +94,7 @@ export const Newbutton = styled.button`
   background: var(--black);
   border-radius: 100px;
   color: var(--white);
-  font-family: "Mulish";
-  font-style: normal;
+ 
   font-weight: 400;
   font-size: 20px;
   line-height: 50px;
@@ -117,8 +114,7 @@ export const Name = styled.h1`
   width: 191px;
   height: 1px;
   left: 190px;
-  font-family: "Mulish";
-  font-style: normal;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 27px;

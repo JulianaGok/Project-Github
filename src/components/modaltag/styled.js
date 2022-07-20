@@ -67,9 +67,7 @@ export const Inputtag = styled.input`
     left: 995px;
     top: 125px;
     padding: 14px 30px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
+
     font-size: 16px;
     line-height: 19px;
     color: var(--grey);
@@ -84,8 +82,7 @@ export const Title = styled.h1`
   height: 30px;
   left: 40px;
   top: 40px;
-  font-family: 'Mulish';
-  font-style: normal;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -115,9 +112,7 @@ export const Buttonsaved = styled.button`
   top: 350px;
   background: var(--black);
   border-radius: 100px;
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 400;
+  
   font-size: 20px;
   line-height: 25px;
   text-align: center;
@@ -134,8 +129,7 @@ export const Buttoncancel = styled.button`
   top: 420px;
   background: var(--white);
   border-radius: 100px;
-  font-family: 'Mulish';
-  font-style: normal;
+  
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
@@ -152,9 +146,7 @@ export const Taginput = styled.text`
   height: 20px;
   left: 50px;
   top: 180px;
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 400;
+
   font-size: 16px;
   line-height: 20px;
   color: var(--grey);
