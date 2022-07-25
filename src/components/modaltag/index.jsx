@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Modal from 'react-modal';
 import { useState } from 'react';
@@ -27,8 +28,9 @@ export function Modaltag() {
 
     return (
         <div>
+           
             <Buttontag
-                onClick={hardleOpenNewTagModal} >Adicionar tags
+                onClick={hardleOpenNewTagModal} >Adicionar tags +
             </Buttontag>
 
             <Modal

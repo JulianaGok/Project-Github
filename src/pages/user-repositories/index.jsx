@@ -10,24 +10,27 @@ import Flag from "../../../src/assets/flag.svg";
 import Iconlink from "../../../src/assets/iconlink.svg";
 import Iconjob from "../../../src/assets/person.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
-import Search from "../../../src/assets/search.svg";
 import Arrow from "../../../src/assets/arrow.svg";
 import { Modaltag } from "../../components/modaltag";
+import { FiSearch } from "react-icons/fi";
 
-import { Container, Avatar, Arrowstyle } from "./styled";
+import { Container, Avatar, Arrowstyle,Tags } from "./styled";
+import { Input } from "semantic-ui-react";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
 export { useQuery };
-
 export default function UseRepositories({ props }) {
   const query = useQuery();
   const [user, setUser] = useState({});
   const [repositories, setRepositories] = useState([]);
-// const date = new Intl.DateTimeFormat('pt-BR', {dateStyle:'shot', timeStyle: 'shot'}).format (createdAt.toDate())}> 
-// <data-id= "${repo.updated_at}"/>
+  const [input, setInput]=useState('');
+  // const dataFormatada = new Intl.DateTimeFormat("pt-BR").format(createdAt.toDate());
+// const date = new Intl.DateTimeFormat('pt-BR', {dateStyle:'shot', timeStyle: 'shot'}).format (createdAt.toDate());                                                                                                               ^
+
+
 
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
@@ -38,8 +41,30 @@ export default function UseRepositories({ props }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  async function handleRepositories() {
+    if (input === "") {
+      alert("Campo vazio! Preencha com um nome de repositórios ;) ");
+      return;
+    }
+
+    try {
+      const response = await Api.get(`/${input}`);
+      setRepositories(response.data);
+      setInput("");
+
+    } catch {
+      setInput("");
+    }
+  }
+
+  // var data = await res.json()
+  // data.map(repo => {
+  //   let li = document.createElement('li')
+  // })
+
   return (
     <>
+    
       <Header />
 
       <Container>
@@ -93,42 +118,41 @@ export default function UseRepositories({ props }) {
 
         {/* Parte dos repositorios do usuario e os inputs de pesquisa */}
         <div className="user-right">
-        {/* <Searchinput>
-            <img
-              src={Search}
-              alt="trash"
-              placeholder="Buscar um repositório..."
-              type={"text"}
-            />
-          </Searchinput> */}
           <div className="searchinput">
-         <imput>
-          <img
-          // value={repositories}
-          // onChange={(e) => setRepositories(e.target.value)}
-              src={Search}
-              alt="trash"
+            <input
+              type="text"
               placeholder="Buscar um repositório..."
-              type={"text"}
-          />
-        </imput>
+              value={Input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+
+            <button onClick={handleRepositories}>
+              <FiSearch size={20} color="#606060" />
+            </button>
           </div>
 
           {repositories.map((repo, index) => (
             <div key={index}>
               <div className="repo-info">
                 <h1>
-                  {repo.name} <Arrowstyle src={Arrow} alt="arrow" />
+                  {repo.name} 
+                  <a href="https://github.com/" target="_blanck" ><Arrowstyle src={Arrow} alt="arrow" /></a>
+                  
                 </h1>
                 <br></br>
                 <p>{repo.description}</p>
+                
+                <Tags><p>{repo.topics}</p></Tags>
                 <Modaltag />
                 <br></br>
                 <div className="info">
                   <img src={World} alt="world" />
                   <p>{repo.language}</p>
                   <img src={Time} alt="time" />
+
                   <p>{repo.updated_at}</p>
+
+
                   <img src={Star} alt="star" />
                   <p>{repo.stargazers_count}</p>
                   <img src={Person} alt="person" />

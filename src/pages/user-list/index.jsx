@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Api from "../../services/api";
@@ -8,7 +9,8 @@ import Iconjob from "../../../src/assets/iconjob.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
 import Star from "../../../src/assets/star.svg";
 import Trash from "../../../src/assets/trash.svg";
-// import Axios from "../../services/api";
+
+
 
 import {
   Container,
@@ -33,6 +35,7 @@ export default function UserList({ props }) {
 
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
+    
     // Api.getReposByUsername(query.get("text")).then((res) =>
     //   setRepositories(res.data)
     // );
@@ -48,10 +51,12 @@ export default function UserList({ props }) {
   //   setUser(user.delete);
   // }
 
+ 
   return (
     <>
+    
       <Header />
-      <Newbutton type="button">
+      <Newbutton type="button"> 
         <Link to={`/?text=${searchText}`} onClick={() => getUser()}>
           Adicionar Novo
         </Link>
@@ -70,7 +75,7 @@ export default function UserList({ props }) {
 
           <div className="name-login">
             <Name type="button">
-              <Link to={`/user-repositories?text=${user.login}`}>
+              <Link to={`/user-repositories?text=${user.login} `}>
                 {user.name}
               </Link>
             </Name>
@@ -92,7 +97,7 @@ export default function UserList({ props }) {
               src={Trash}
               alt="trash"
               type="deleteUser"
-              // onClick={()=> (user.delete)}
+              // onClick={deleteUser}
             />
           </Trashstyle>
         </Container>

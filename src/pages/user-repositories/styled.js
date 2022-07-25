@@ -14,6 +14,34 @@ export const Container = styled.div`
     display: inline;
   }
 
+  
+  div.searchinput  {
+  display: flex;
+  width: 26rem;
+  height: 4rem;
+  padding: 14px 30px;
+  border: 1px solid var(--white-200);
+  border-radius: 4px;
+  background-color: var(--white);
+  button {
+    border: 0;
+    background-color: transparent;
+  }
+    
+  input {
+    width: 26rem;
+      background-color: transparent;
+      border: 0;
+      font-size: 16px;
+      outline: none;
+      margin-right: 8px;
+    }
+    
+  @media (max-width: 800px) {
+    width: 98%;
+    margin-left: 1%;
+  }}
+
   /* informacoes do usuario a direita */
   div.repo-info {
     width: 45rem;
@@ -98,21 +126,6 @@ export const Container = styled.div`
     }
   }
 
-  div.searchinput {
-  display: flex;
-  width: 26rem;
-  height: 4rem;
-  padding: 14px 30px;
-  border: 1px solid var(--white-200);
-  border-radius: 4px;
-  background-color: var(--white);
-  cursor: pointer;
-  font-size: 16px;
-  @media (max-width: 800px) {
-    width: 98%;
-    margin-left: 1%;
-  }
-}  
 `;
 
 export const Avatar = styled.img`
@@ -122,22 +135,20 @@ export const Avatar = styled.img`
     border-radius: 50%;
   }
 `;
-
-// export const Searchinput = styled.input`
-//   display: flex;
-//   width: 26rem;
-//   height: 4rem;
-//   padding: 14px 30px;
-//   border: 1px solid var(--white-200);
-//   border-radius: 4px;
-//   background-color: var(--white);
-//   cursor: pointer;
-//   font-size: 16px;
-//   @media (max-width: 800px) {
-//     width: 98%;
-//     margin-left: 1%;
-//   }
-// `;
+export const Tags = styled.style`
+flex-direction: column;
+display: flex;
+padding: 5px 20px;
+background: rgba(0, 23, 255, 0.08);
+border-radius: 100px;
+border:10px;
+border-color: var(--blue);
+display:flex;
+  
+    box-sizing:border-box;
+font-size: 16px;
+line-height: 20px;
+color: var(--blue);`
 
 export const Arrowstyle = styled.img`
   width: 4rem;
