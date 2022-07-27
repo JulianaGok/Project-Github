@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Api from "../../services/api";
 import { Header } from "../../components/header";
+import { Modaltag } from "../../components/modaltag";
+import { FiSearch } from "react-icons/fi";
+import { Input } from "semantic-ui-react";
 import World from "../../../src/assets/world.svg";
 import Time from "../../../src/assets/time.svg";
 import Star from "../../../src/assets/star.svg";
@@ -11,11 +14,9 @@ import Iconlink from "../../../src/assets/iconlink.svg";
 import Iconjob from "../../../src/assets/person.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
 import Arrow from "../../../src/assets/arrow.svg";
-import { Modaltag } from "../../components/modaltag";
-import { FiSearch } from "react-icons/fi";
-
-import { Container, Avatar, Arrowstyle,Tags } from "./styled";
-import { Input } from "semantic-ui-react";
+import Arrowtwo from "../../../src/assets/arrowtwo.svg";
+import { Container, Avatar, Arrowstyle } from "./styled";
+import { Link } from "react-router-dom";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -26,15 +27,14 @@ export default function UseRepositories({ props }) {
   const query = useQuery();
   const [user, setUser] = useState({});
   const [repositories, setRepositories] = useState([]);
-  const [input, setInput]=useState('');
-  // const dataFormatada = new Intl.DateTimeFormat("pt-BR").format(createdAt.toDate());
-// const date = new Intl.DateTimeFormat('pt-BR', {dateStyle:'shot', timeStyle: 'shot'}).format (createdAt.toDate());                                                                                                               ^
+  const [input, setInput] = useState("");
+  const [searchText] = useState("");
 
-
-
+  const getUser = () => {
+    Api.getByUsername(searchText).then((res) => setUser([res.data]));
+  };
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
-    // Api.getByUsername(query.get("text")).then(res => console.log(res, "oii"));
     Api.getReposByUsername(query.get("text")).then((res) =>
       setRepositories(res.data)
     );
@@ -51,32 +51,43 @@ export default function UseRepositories({ props }) {
       const response = await Api.get(`/${input}`);
       setRepositories(response.data);
       setInput("");
-
     } catch {
       setInput("");
     }
   }
 
-  // var data = await res.json()
-  // data.map(repo => {
-  //   let li = document.createElement('li')
-  // })
+  // new Intl.DateTimeFormat('pt-BR', {
+  //   dateStyle: "shot",
+  //   timeStyle: "shot",
+  // }).format(data)
+
+  // const now = new Date();
+  // dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
 
   return (
     <>
-    
       <Header />
-
       <Container>
-        {/* Contem as informacoes  do usuario de login */}
         <div className="user-left">
           <>
+         
             <div className="user-info">
+              
+            <button onClick={() => getUser()}>
+            <Link to={`/?text=${searchText}`} onClick={() => getUser()}>
+            <Arrowstyle src={Arrowtwo} alt="arrow" />
+            </Link>
+                
+              </button>
+
+            <div className="user">
               <Avatar
                 className="avatar"
                 src={user.avatar_url}
                 alt="avatar"
               ></Avatar>
+              </div>
+
               <h1>{user.name}</h1>
               <br></br>
               <h3>@{user.login}</h3>
@@ -116,7 +127,6 @@ export default function UseRepositories({ props }) {
           </>
         </div>
 
-        {/* Parte dos repositorios do usuario e os inputs de pesquisa */}
         <div className="user-right">
           <div className="searchinput">
             <input
@@ -125,34 +135,31 @@ export default function UseRepositories({ props }) {
               value={Input}
               onChange={(e) => setInput(e.target.value)}
             />
-
             <button onClick={handleRepositories}>
               <FiSearch size={20} color="#606060" />
             </button>
           </div>
-
           {repositories.map((repo, index) => (
             <div key={index}>
               <div className="repo-info">
                 <h1>
-                  {repo.name} 
-                  <a href="https://github.com/" target="_blanck" ><Arrowstyle src={Arrow} alt="arrow" /></a>
-                  
+                  {repo.name}
+                  <a href="https://github.com/" target="_blanck">
+                    <Arrowstyle src={Arrow} alt="arrow" />
+                  </a>
                 </h1>
                 <br></br>
                 <p>{repo.description}</p>
-                
-                <Tags><p>{repo.topics}</p></Tags>
+
                 <Modaltag />
                 <br></br>
                 <div className="info">
                   <img src={World} alt="world" />
                   <p>{repo.language}</p>
                   <img src={Time} alt="time" />
-
+                  {/* (new Intl.DateTimeFormat('pt-BR', { dateStyle: 'full', timeStyle: 'long' }).format(repo.updated_at)); */}
+                  {/* {new Intl.DateTimeFormat('pt-BR').format(repo.updated_at)}; */}
                   <p>{repo.updated_at}</p>
-
-
                   <img src={Star} alt="star" />
                   <p>{repo.stargazers_count}</p>
                   <img src={Person} alt="person" />

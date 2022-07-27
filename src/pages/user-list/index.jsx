@@ -10,8 +10,6 @@ import Iconlocal from "../../../src/assets/iconlocal.svg";
 import Star from "../../../src/assets/star.svg";
 import Trash from "../../../src/assets/trash.svg";
 
-
-
 import {
   Container,
   Name,

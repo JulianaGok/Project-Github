@@ -14,7 +14,15 @@ export const Container = styled.div`
     display: inline;
   }
 
-  
+  div.user-info button {
+    border: 0;
+    background-color:  var(--grey);
+    border-radius: 10px;
+    height: 3rem;
+    cursor: pointer;
+    
+  }
+
   div.searchinput  {
   display: flex;
   width: 26rem;
@@ -130,25 +138,13 @@ export const Container = styled.div`
 
 export const Avatar = styled.img`
   &.avatar {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-  }
-`;
-export const Tags = styled.style`
-flex-direction: column;
-display: flex;
-padding: 5px 20px;
-background: rgba(0, 23, 255, 0.08);
-border-radius: 100px;
-border:10px;
-border-color: var(--blue);
-display:flex;
-  
-    box-sizing:border-box;
-font-size: 16px;
-line-height: 20px;
-color: var(--blue);`
+    margin-left: 30%;
+}`;
 
 export const Arrowstyle = styled.img`
   width: 4rem;
