@@ -20,22 +20,18 @@ export default function Home() {
   return (
     <Container>
       <div className="content-left">
-      
         <Logo src={github} alt="github" />
         <Title>Buscar usuário</Title>
         <Text>Crie sua conta através do seu usuário do GitHub</Text>
-       
+
         {/* <input>
         <VscAccount size={20} color="#606060" />
         </input> */}
         <Input
-        
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           placeholder="@username"
           type={"text"}
-             
-           
         />
         <Button type="button">
           <Link to={`/user-list?text=${searchText}`}>Cadastrar</Link>

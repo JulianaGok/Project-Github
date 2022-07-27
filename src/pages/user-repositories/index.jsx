@@ -70,22 +70,19 @@ export default function UseRepositories({ props }) {
       <Container>
         <div className="user-left">
           <>
-         
             <div className="user-info">
-              
-            <button onClick={() => getUser()}>
-            <Link to={`/?text=${searchText}`} onClick={() => getUser()}>
-            <Arrowstyle src={Arrowtwo} alt="arrow" />
-            </Link>
-                
+              <button onClick={() => getUser()}>
+                <Link to={`/?text=${searchText}`} onClick={() => getUser()}>
+                  <Arrowstyle src={Arrowtwo} alt="arrow" />
+                </Link>
               </button>
 
-            <div className="user">
-              <Avatar
-                className="avatar"
-                src={user.avatar_url}
-                alt="avatar"
-              ></Avatar>
+              <div className="user">
+                <Avatar
+                  className="avatar"
+                  src={user.avatar_url}
+                  alt="avatar"
+                ></Avatar>
               </div>
 
               <h1>{user.name}</h1>

@@ -16,39 +16,39 @@ export const Container = styled.div`
 
   div.user-info button {
     border: 0;
-    background-color:  var(--grey);
+    background-color: var(--grey);
     border-radius: 10px;
     height: 3rem;
     cursor: pointer;
-    
   }
 
-  div.searchinput  {
-  display: flex;
-  width: 26rem;
-  height: 4rem;
-  padding: 14px 30px;
-  border: 1px solid var(--white-200);
-  border-radius: 4px;
-  background-color: var(--white);
-  button {
-    border: 0;
-    background-color: transparent;
-  }
-    
-  input {
+  div.searchinput {
+    display: flex;
     width: 26rem;
+    height: 4rem;
+    padding: 14px 30px;
+    border: 1px solid var(--white-200);
+    border-radius: 4px;
+    background-color: var(--white);
+    button {
+      border: 0;
+      background-color: transparent;
+    }
+
+    input {
+      width: 26rem;
       background-color: transparent;
       border: 0;
       font-size: 16px;
       outline: none;
       margin-right: 8px;
     }
-    
-  @media (max-width: 800px) {
-    width: 98%;
-    margin-left: 1%;
-  }}
+
+    @media (max-width: 800px) {
+      width: 98%;
+      margin-left: 1%;
+    }
+  }
 
   /* informacoes do usuario a direita */
   div.repo-info {
@@ -133,7 +133,6 @@ export const Container = styled.div`
       top: 41rem;
     }
   }
-
 `;
 
 export const Avatar = styled.img`
@@ -144,7 +143,8 @@ export const Avatar = styled.img`
     height: 100px;
     border-radius: 50%;
     margin-left: 30%;
-}`;
+  }
+`;
 
 export const Arrowstyle = styled.img`
   width: 4rem;

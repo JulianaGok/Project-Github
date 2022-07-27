@@ -19,7 +19,6 @@ import {
   Trashstyle,
 } from "./styled";
 
-
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -33,7 +32,7 @@ export default function UserList({ props }) {
 
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
-    
+
     // Api.getReposByUsername(query.get("text")).then((res) =>
     //   setRepositories(res.data)
     // );
@@ -48,13 +47,10 @@ export default function UserList({ props }) {
   //  Api.handleDelete()
   //   setUser(user.delete);
   // }
-
- 
   return (
     <>
-    
       <Header />
-      <Newbutton type="button"> 
+      <Newbutton type="button">
         <Link to={`/?text=${searchText}`} onClick={() => getUser()}>
           Adicionar Novo
         </Link>

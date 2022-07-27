@@ -62,7 +62,7 @@ export const Trashstyle = styled.button`
   cursor: pointer;
   @media (max-width: 800px) {
     margin-left: 10%;
-    }
+  }
 `;
 
 export const Avatar = styled.img`
@@ -93,7 +93,7 @@ export const Newbutton = styled.button`
   background: var(--black);
   border-radius: 100px;
   color: var(--white);
- 
+
   font-weight: 400;
   font-size: 20px;
   line-height: 50px;
