@@ -21,13 +21,12 @@ import { Link } from "react-router-dom";
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
-
 export { useQuery };
 export default function UseRepositories({ props }) {
   const query = useQuery();
   const [user, setUser] = useState({});
   const [repositories, setRepositories] = useState([]);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
   const [searchText] = useState("");
 
   const getUser = () => {
@@ -42,32 +41,28 @@ export default function UseRepositories({ props }) {
   }, []);
 
   async function handleRepositories() {
+
     if (input === "") {
       alert("Campo vazio! Preencha com um nome de repositórios ;) ");
       return;
     }
 
     try {
-      const response = await Api.get(`/${input}`);
+      const response = await Api.get(`repo/${input}`);
       setRepositories(response.data);
       setInput("");
+
     } catch {
       setInput("");
     }
   }
 
-  // new Intl.DateTimeFormat('pt-BR', {
-  //   dateStyle: "shot",
-  //   timeStyle: "shot",
-  // }).format(data)
-
-  // const now = new Date();
-  // dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
-
+  
   return (
     <>
       <Header />
       <Container>
+        
         <div className="user-left">
           <>
             <div className="user-info">
@@ -154,8 +149,6 @@ export default function UseRepositories({ props }) {
                   <img src={World} alt="world" />
                   <p>{repo.language}</p>
                   <img src={Time} alt="time" />
-                  {/* (new Intl.DateTimeFormat('pt-BR', { dateStyle: 'full', timeStyle: 'long' }).format(repo.updated_at)); */}
-                  {/* {new Intl.DateTimeFormat('pt-BR').format(repo.updated_at)}; */}
                   <p>{repo.updated_at}</p>
                   <img src={Star} alt="star" />
                   <p>{repo.stargazers_count}</p>
