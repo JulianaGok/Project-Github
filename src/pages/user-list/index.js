@@ -8,10 +8,7 @@ import Arrow from "../../../src/assets/arrow.svg";
 import Iconjob from "../../../src/assets/iconjob.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
 import Star from "../../../src/assets/star.svg";
-
-import {
-  FaTrash,
-} from "react-icons/fa";
+import Trash from "../../../src/assets/trash.svg";
 
 import {
   Container,
@@ -19,6 +16,7 @@ import {
   Avatar,
   Arrowstyle,
   Newbutton,
+  Trashstyle
 } from "./styled";
 
 function useQuery() {
@@ -86,10 +84,14 @@ export default function UserList ({ props }) {
             </div>
           </div>
           <Arrowstyle src={Arrow} alt="arrow" />
-          <FaTrash onClick={() => 
-            (user)
-          } 
+          <Trashstyle>
+            <img
+              src={Trash}
+              alt="trash"
+              type="deleteUser"
+              // onClick={deleteUser}
             />
+          </Trashstyle>
         </Container>
       </>
     </>
