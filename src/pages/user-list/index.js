@@ -26,20 +26,17 @@ function useQuery() {
 }
 export { useQuery };
 
-export default function UserList ({ props,name }) {
+export default function UserList ({ props }) {
   const query = useQuery();
   const [searchText] = useState("");
   const [user, setUser] = useState([]);
 
-
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
-
+      
   // const onDelete = (user) => {
-  //   const newArray = user(() => user !== user);
-  //   setUser(newArray);
-  //   localStorage.setUser("user", JSON.stringify(newArray));
+  //   localStorage.removeItem("user", JSON.stringify(user));
   // };
 
   useEffect(() => {
@@ -90,7 +87,9 @@ export default function UserList ({ props,name }) {
           </div>
           <Arrowstyle src={Arrow} alt="arrow" />
           <FaTrash onClick={() => 
-            "removeItem()"(user.login)} />
+            (user)
+          } 
+            />
         </Container>
       </>
     </>
