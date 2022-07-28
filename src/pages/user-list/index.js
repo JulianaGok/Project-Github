@@ -8,7 +8,10 @@ import Arrow from "../../../src/assets/arrow.svg";
 import Iconjob from "../../../src/assets/iconjob.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
 import Star from "../../../src/assets/star.svg";
-import Trash from "../../../src/assets/trash.svg";
+
+import {
+  FaTrash,
+} from "react-icons/fa";
 
 import {
   Container,
@@ -16,7 +19,6 @@ import {
   Avatar,
   Arrowstyle,
   Newbutton,
-  Trashstyle,
 } from "./styled";
 
 function useQuery() {
@@ -24,18 +26,24 @@ function useQuery() {
 }
 export { useQuery };
 
-export default function UserList({ props }) {
+export default function UserList ({ props,name }) {
   const query = useQuery();
   const [searchText] = useState("");
-  const [user, setUser] = useState({});
-  // const [setRepositories] = useState([]);
+  const [user, setUser] = useState([]);
+
+
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
+
+  // const onDelete = (user) => {
+  //   const newArray = user(() => user !== user);
+  //   setUser(newArray);
+  //   localStorage.setUser("user", JSON.stringify(newArray));
+  // };
 
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
-
-    // Api.getReposByUsername(query.get("text")).then((res) =>
-    //   setRepositories(res.data)
-    // );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -43,10 +51,6 @@ export default function UserList({ props }) {
     Api.getByUsername(searchText).then((res) => setUser([res.data]));
   };
 
-  // const handleDelete = user => {
-  //  Api.handleDelete()
-  //   setUser(user.delete);
-  // }
   return (
     <>
       <Header />
@@ -85,15 +89,8 @@ export default function UserList({ props }) {
             </div>
           </div>
           <Arrowstyle src={Arrow} alt="arrow" />
-
-          <Trashstyle>
-            <img
-              src={Trash}
-              alt="trash"
-              type="deleteUser"
-              // onClick={deleteUser}
-            />
-          </Trashstyle>
+          <FaTrash onClick={() => 
+            "removeItem()"(user.login)} />
         </Container>
       </>
     </>

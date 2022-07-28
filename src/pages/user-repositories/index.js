@@ -4,7 +4,7 @@ import Api from "../../services/api";
 import { Header } from "../../components/header";
 import { Modaltag } from "../../components/modaltag";
 import { FiSearch } from "react-icons/fi";
-import { Input } from "semantic-ui-react";
+// import { Input } from "semantic-ui-react";
 import World from "../../../src/assets/world.svg";
 import Time from "../../../src/assets/time.svg";
 import Star from "../../../src/assets/star.svg";
@@ -26,12 +26,13 @@ export default function UseRepositories({ props }) {
   const query = useQuery();
   const [user, setUser] = useState({});
   const [repositories, setRepositories] = useState([]);
-  const [input, setInput] = useState('');
+  // const [input, setInput] = useState("");
   const [searchText] = useState("");
 
   const getUser = () => {
     Api.getByUsername(searchText).then((res) => setUser([res.data]));
   };
+
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
     Api.getReposByUsername(query.get("text")).then((res) =>
@@ -40,29 +41,10 @@ export default function UseRepositories({ props }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function handleRepositories() {
-
-    if (input === "") {
-      alert("Campo vazio! Preencha com um nome de repositórios ;) ");
-      return;
-    }
-
-    try {
-      const response = await Api.get(`repo/${input}`);
-      setRepositories(response.data);
-      setInput("");
-
-    } catch {
-      setInput("");
-    }
-  }
-
-  
   return (
     <>
       <Header />
       <Container>
-        
         <div className="user-left">
           <>
             <div className="user-info">
@@ -120,8 +102,7 @@ export default function UseRepositories({ props }) {
         </div>
 
         <div className="user-right">
-          <div className="searchinput">
-            <input
+          {/* <input
               type="text"
               placeholder="Buscar um repositório..."
               value={Input}
@@ -129,14 +110,27 @@ export default function UseRepositories({ props }) {
             />
             <button onClick={handleRepositories}>
               <FiSearch size={20} color="#606060" />
+            </button> */}
+
+          <div className="searchinput">
+            <input
+              placeholder="Buscar um repositório.."
+              // onChange={onChangeHandler}
+            />
+            <button
+            // onClick={onButtonClickHandler}
+            >
+              <FiSearch size={20} color="#606060" />
             </button>
           </div>
+
           {repositories.map((repo, index) => (
             <div key={index}>
               <div className="repo-info">
                 <h1>
                   {repo.name}
-                  <a href="https://github.com/" target="_blanck">
+
+                  <a href="https://github.com/repos + " target="_blanck">
                     <Arrowstyle src={Arrow} alt="arrow" />
                   </a>
                 </h1>

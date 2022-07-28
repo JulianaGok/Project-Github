@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import men from "../../assets/men.svg";
 import github from "../../assets/github.svg";
@@ -27,6 +27,9 @@ export default function Home() {
         {/* <input>
         <VscAccount size={20} color="#606060" />
         </input> */}
+
+
+
         <Input
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}

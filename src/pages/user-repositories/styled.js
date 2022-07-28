@@ -33,6 +33,7 @@ export const Container = styled.div`
     button {
       border: 0;
       background-color: transparent;
+      cursor: pointer;
     }
 
     input {

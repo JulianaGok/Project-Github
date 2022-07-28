@@ -1,8 +1,18 @@
 var axios = require("axios");
 
+// export const searchRepo = async (input) => {
+//   try {
+//       let url = `https://api.github.com/repo/{user.login}/${input}`
+//       const response = await fetch(url)
+//       return await response.json()
+//   } catch (error) {
+//       console.log("error: ", error)
+//   }
+// }
+
 export const searchRepo = async (repo) => {
   try {
-      let url = `https://api.github.com/users/ + username/repos/${repo.name}`
+      let url = `https://api.github.com/repo/{user.login}/${repo}`
       const response = await fetch(url)
       return await response.json()
   } catch (error) {
@@ -17,10 +27,8 @@ class Api {
   getReposByUsername(username) {
     return axios.get("https://api.github.com/users/" + username + "/repos");
   }
-
-  
-//  handleDelete(username) {
-//   return  axios.delete("https://api.github.com/users/" + username);
+//   deleteByUsername(username) {
+//   return  axios.get("https://api.github.com/users/");
 // }
 }
 
