@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div `
   display: flex;
   flex: 1;
   width: 100vw;
@@ -37,7 +37,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Phrase = styled.h2`
+export const Phrase = styled.h2 `
   display: flex;
   width: 80%;
 
@@ -50,21 +50,21 @@ export const Phrase = styled.h2`
   }
 `;
 
-export const Figure = styled.img`
+export const Figure = styled.img `
   width: 80%;
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.img `
   width: 20rem;
   height: 20%;
   @media (max-width: 800px) {
     width: 80%;
   }
 `;
-export const Title = styled.h1`
+export const Title = styled.h1 `
   height: 30px;
   font-weight: 700;
   font-size: 24px;
@@ -72,14 +72,14 @@ export const Title = styled.h1`
   color: var(--black);
 `;
 
-export const Text = styled.h2`
+export const Text = styled.h2 `
   height: 40px;
   font-size: 16px;
   line-height: 20px;
   color: var(--grey);
 `;
 
-export const Input = styled.input`
+export const Input = styled.input `
   width: 26rem;
   height: 4rem;
   padding: 14px 30px;
@@ -94,7 +94,7 @@ export const Input = styled.input`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button `
   width: 26rem;
   margin-top: 2rem;
   border-radius: 100px;

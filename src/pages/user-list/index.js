@@ -1,9 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import Api from "../../services/api";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Header } from "../../components/header";
+
+import Api from "../../services/api";
 import Arrow from "../../../src/assets/arrow.svg";
 import Iconjob from "../../../src/assets/iconjob.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
@@ -20,7 +20,7 @@ import {
 } from "./styled";
 
 function useQuery() {
-  return new URLSearchParams(useLocation().search);
+ return new URLSearchParams(useLocation().search); 
 }
 export { useQuery };
 
@@ -33,9 +33,9 @@ export default function UserList ({ props }) {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
       
-  // const onDelete = (user) => {
-  //   localStorage.removeItem("user", JSON.stringify(user));
-  // };
+  const onDelete = (user) => {
+    localStorage.removeItem("user", JSON.stringify(user));
+  };
 
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
@@ -47,53 +47,65 @@ export default function UserList ({ props }) {
   };
 
   return (
-    <>
+    <div>
       <Header />
       <Newbutton type="button">
-        <Link to={`/?text=${searchText}`} onClick={() => getUser()}>
-          Adicionar Novo
+        <Link to={`/?text=${searchText}`} 
+        onClick={() => getUser()}
+        > Adicionar Novo
         </Link>
       </Newbutton>
 
       {/* <Newinput value={searchText} onChange={e => setSearchText(e.target.value)}
                 type={"text"} placeholder="@username" />
             <Newbutton onClick={() => getUser()}> Adicionar Novo</Newbutton> */}
-      <>
+      <div>
         <Container>
           <Avatar
             className="avatar"
             src={user.avatar_url}
-            alt="avatar"
-          ></Avatar>
+            alt="avatar" >
+          </Avatar>
 
           <div className="name-login">
             <Name type="button">
-              <Link to={`/user-repositories?text=${user.login} `}>
-                {user.name}
+              <Link to={`/user-repositories?text=${user.login} `}
+              > {user.name}
               </Link>
             </Name>
+
             <br></br>
             <h3>@{user.login}</h3>
+
             <div className="info">
-              <img src={Iconjob} alt="iconejob" />
+              <img 
+              src={Iconjob} 
+              alt="iconejob" />
+
               <p>{user.company}</p>
-              <img src={Iconlocal} alt="iconlocal" />
+              <img 
+              src={Iconlocal} 
+              alt="iconlocal" />
+
               <p>{user.location}</p>
-              <img src={Star} alt="star" />
+              <img 
+              src={Star} 
+              alt="star" />
+
               <p>{user.public_repos}</p>
             </div>
           </div>
+
           <Arrowstyle src={Arrow} alt="arrow" />
           <Trashstyle>
             <img
               src={Trash}
               alt="trash"
               type="deleteUser"
-              // onClick={deleteUser}
-            />
+              onClick={onDelete}/>
           </Trashstyle>
         </Container>
-      </>
-    </>
+      </div>
+    </div>
   );
 }

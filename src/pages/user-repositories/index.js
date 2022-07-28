@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import Api from "../../services/api";
+import { useLocation, Link  } from "react-router-dom";
 import { Header } from "../../components/header";
 import { Modaltag } from "../../components/modaltag";
 import { FiSearch } from "react-icons/fi";
-// import { Input } from "semantic-ui-react";
+
+import Api from "../../services/api";
 import World from "../../../src/assets/world.svg";
 import Time from "../../../src/assets/time.svg";
 import Star from "../../../src/assets/star.svg";
@@ -15,19 +15,25 @@ import Iconjob from "../../../src/assets/person.svg";
 import Iconlocal from "../../../src/assets/iconlocal.svg";
 import Arrow from "../../../src/assets/arrow.svg";
 import Arrowtwo from "../../../src/assets/arrowtwo.svg";
-import { Container, Avatar, Arrowstyle } from "./styled";
-import { Link } from "react-router-dom";
+// import { Input } from "semantic-ui-react";
+
+import { 
+  Container, 
+  Avatar, 
+  Arrowstyle } 
+  from "./styled";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 export { useQuery };
+
 export default function UseRepositories({ props }) {
   const query = useQuery();
   const [user, setUser] = useState({});
   const [repositories, setRepositories] = useState([]);
-  // const [input, setInput] = useState("");
   const [searchText] = useState("");
+  // const [input, setInput] = useState("");
 
   const getUser = () => {
     Api.getByUsername(searchText).then((res) => setUser([res.data]));
@@ -42,15 +48,20 @@ export default function UseRepositories({ props }) {
   }, []);
 
   return (
-    <>
+    <div>
       <Header />
       <Container>
         <div className="user-left">
-          <>
+          
             <div className="user-info">
-              <button onClick={() => getUser()}>
-                <Link to={`/?text=${searchText}`} onClick={() => getUser()}>
-                  <Arrowstyle src={Arrowtwo} alt="arrow" />
+              <button 
+              onClick={() => getUser()}>
+                <Link 
+                to={`/?text=${searchText}`} 
+                onClick={() => getUser()}>
+                  <Arrowstyle 
+                  src={Arrowtwo} 
+                  alt="arrow" />
                 </Link>
               </button>
 
@@ -77,17 +88,23 @@ export default function UseRepositories({ props }) {
               <p>{user.bio}</p>
               <br></br>
               <p>
-                <img src={Iconjob} alt="iconjob" />
+                <img 
+                src={Iconjob} 
+                alt="iconjob" />
                 {user.company}
               </p>
               <br></br>
               <p>
-                <img src={Iconlocal} alt="iconlocal" />
+                <img 
+                src={Iconlocal} 
+                alt="iconlocal" />
                 {user.location}
               </p>
               <br></br>
               <p>
-                <img src={Iconlink} alt="iconlink" />
+                <img 
+                src={Iconlink} 
+                alt="iconlink" />
                 {user.blog}
               </p>
             </div>
@@ -95,10 +112,12 @@ export default function UseRepositories({ props }) {
             <div className="important">
               <h1>Destaques</h1>
               <br></br>
-              <img src={Flag} alt="iconejob" />
+              <img 
+              src={Flag} 
+              alt="iconejob" />
               <p>{user.public_repos}</p>
             </div>
-          </>
+          <div/>
         </div>
 
         <div className="user-right">
@@ -120,7 +139,9 @@ export default function UseRepositories({ props }) {
             <button
             // onClick={onButtonClickHandler}
             >
-              <FiSearch size={20} color="#606060" />
+              <FiSearch 
+              size={20} 
+              color="#606060" />
             </button>
           </div>
 
@@ -129,9 +150,12 @@ export default function UseRepositories({ props }) {
               <div className="repo-info">
                 <h1>
                   {repo.name}
-
-                  <a href="https://github.com/repos + " target="_blanck">
-                    <Arrowstyle src={Arrow} alt="arrow" />
+                  <a 
+                  href="https://github.com/repos + " 
+                  target="_blanck">
+                    <Arrowstyle 
+                    src={Arrow} 
+                    alt="arrow" />
                   </a>
                 </h1>
                 <br></br>
@@ -140,13 +164,24 @@ export default function UseRepositories({ props }) {
                 <Modaltag />
                 <br></br>
                 <div className="info">
-                  <img src={World} alt="world" />
+                  <img 
+                  src={World} 
+                  alt="world" />
                   <p>{repo.language}</p>
-                  <img src={Time} alt="time" />
+
+                  <img 
+                  src={Time} 
+                  alt="time" />
                   <p>{repo.updated_at}</p>
-                  <img src={Star} alt="star" />
+
+                  <img 
+                  src={Star} 
+                  alt="star" />
                   <p>{repo.stargazers_count}</p>
-                  <img src={Person} alt="person" />
+
+                  <img 
+                  src={Person} 
+                  alt="person" />
                   <p>{repo.watchers_count}</p>
                 </div>
               </div>
@@ -154,6 +189,6 @@ export default function UseRepositories({ props }) {
           ))}
         </div>
       </Container>
-    </>
+    </div>
   );
 }
